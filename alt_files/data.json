@@ -1,0 +1,1289 @@
+{
+  "Master_DMC": [
+    {
+      "Master_DMC_id": 1,
+      "destinations": [
+        {
+          "DMC_id": 101,
+          "country": "India",
+          "cities": [
+            {
+              "city": "Delhi",
+              "packages": [
+                {
+                  "days": {
+                    "0": {
+                      "day": 1,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "DEL_H01", "hotel_name": "Taj Palace", "price": 250 },
+                        "Hotel 2": { "hotel_id": "DEL_H02", "hotel_name": "The Oberoi", "price": 320 },
+                        "Hotel 3": { "hotel_id": "DEL_H03", "hotel_name": "ITC Maurya", "price": 280 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A1", "name": "Red Fort" },
+                        "Attraction 2": { "attraction_id": "A2", "name": "India Gate" },
+                        "Attraction 3": { "attraction_id": "A3", "name": "Qutub Minar" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R1", "name": "Karim's" },
+                        "Restaurant 2": { "restaurant_id": "R2", "name": "Bukhara" },
+                        "Restaurant 3": { "restaurant_id": "R3", "name": "Moti Mahal" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT1", "name": "Rickshaw Ride in Old Delhi" },
+                        "Activity 2": { "activity_id": "ACT2", "name": "Sound and Light Show at Red Fort" },
+                        "Activity 3": { "activity_id": "ACT3", "name": "Shopping at Chandni Chowk" }
+                      }
+                    },
+                    "1": {
+                      "day": 2,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "DEL_H04", "hotel_name": "Le Meridien", "price": 240 },
+                        "Hotel 2": { "hotel_id": "DEL_H05", "hotel_name": "The Lalit", "price": 230 },
+                        "Hotel 3": { "hotel_id": "DEL_H06", "hotel_name": "Shangri-La Eros", "price": 270 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A4", "name": "Humayun's Tomb" },
+                        "Attraction 2": { "attraction_id": "A5", "name": "Safdarjung Tomb" },
+                        "Attraction 3": { "attraction_id": "A6", "name": "Purana Qila" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R4", "name": "Indian Accent" },
+                        "Restaurant 2": { "restaurant_id": "R5", "name": "The Spice Route" },
+                        "Restaurant 3": { "restaurant_id": "R6", "name": "Saravana Bhavan" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT4", "name": "Heritage Walk" },
+                        "Activity 2": { "activity_id": "ACT5", "name": "Street Food Tour" },
+                        "Activity 3": { "activity_id": "ACT6", "name": "National Gallery of Modern Art Visit" }
+                      }
+                    },
+                    "2": {
+                      "day": 3,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "DEL_H07", "hotel_name": "The Claridges", "price": 260 },
+                        "Hotel 2": { "hotel_id": "DEL_H08", "hotel_name": "The Imperial", "price": 350 },
+                        "Hotel 3": { "hotel_id": "DEL_H09", "hotel_name": "Taj Mahal Hotel", "price": 310 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A7", "name": "Akshardham Temple" },
+                        "Attraction 2": { "attraction_id": "A8", "name": "Lotus Temple" },
+                        "Attraction 3": { "attraction_id": "A9", "name": "ISKCON Temple" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R7", "name": "Dum Pukht" },
+                        "Restaurant 2": { "restaurant_id": "R8", "name": "Veda" },
+                        "Restaurant 3": { "restaurant_id": "R9", "name": "Olive Bar & Kitchen" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT7", "name": "Evening Boat Ride" },
+                        "Activity 2": { "activity_id": "ACT8", "name": "Shopping at Dilli Haat" },
+                        "Activity 3": { "activity_id": "ACT9", "name": "Kingdom of Dreams Show" }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "DMC_id": 102,
+          "country": "UAE",
+          "cities": [
+            {
+              "city": "Dubai",
+              "packages": [
+                {
+                  "days": {
+                    "0": {
+                      "day": 1,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "DXB_H01", "hotel_name": "Burj Al Arab", "price": 800 },
+                        "Hotel 2": { "hotel_id": "DXB_H02", "hotel_name": "Atlantis The Palm", "price": 650 },
+                        "Hotel 3": { "hotel_id": "DXB_H03", "hotel_name": "Jumeirah Beach Hotel", "price": 500 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A1", "name": "Burj Khalifa" },
+                        "Attraction 2": { "attraction_id": "A2", "name": "Dubai Mall" },
+                        "Attraction 3": { "attraction_id": "A3", "name": "Desert Safari" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R1", "name": "Al Mahara" },
+                        "Restaurant 2": { "restaurant_id": "R2", "name": "Nobu Dubai" },
+                        "Restaurant 3": { "restaurant_id": "R3", "name": "Pierchic" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT1", "name": "Desert Safari Ride" },
+                        "Activity 2": { "activity_id": "ACT2", "name": "Dhow Cruise Dinner" },
+                        "Activity 3": { "activity_id": "ACT3", "name": "Skydiving Dubai" }
+                      }
+                    },
+                    "1": {
+                      "day": 2,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "DXB_H04", "hotel_name": "Armani Hotel", "price": 700 },
+                        "Hotel 2": { "hotel_id": "DXB_H05", "hotel_name": "Palazzo Versace", "price": 600 },
+                        "Hotel 3": { "hotel_id": "DXB_H06", "hotel_name": "Address Downtown", "price": 550 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A4", "name": "Dubai Frame" },
+                        "Attraction 2": { "attraction_id": "A5", "name": "Global Village" },
+                        "Attraction 3": { "attraction_id": "A6", "name": "Dubai Marina" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R4", "name": "Zuma" },
+                        "Restaurant 2": { "restaurant_id": "R5", "name": "Hakkasan" },
+                        "Restaurant 3": { "restaurant_id": "R6", "name": "Nusr-Et Steakhouse" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT4", "name": "Luxury Yacht Tour" },
+                        "Activity 2": { "activity_id": "ACT5", "name": "Ski Dubai Snow Park" },
+                        "Activity 3": { "activity_id": "ACT6", "name": "Hot Air Balloon Flight" }
+                      }
+                    },
+                    "2": {
+                      "day": 3,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "DXB_H07", "hotel_name": "JW Marriott Marquis", "price": 400 },
+                        "Hotel 2": { "hotel_id": "DXB_H08", "hotel_name": "Waldorf Astoria", "price": 450 },
+                        "Hotel 3": { "hotel_id": "DXB_H09", "hotel_name": "W Dubai - The Palm", "price": 480 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A7", "name": "Miracle Garden" },
+                        "Attraction 2": { "attraction_id": "A8", "name": "Aquaventure Waterpark" },
+                        "Attraction 3": { "attraction_id": "A9", "name": "The View at The Palm" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R7", "name": "Coya" },
+                        "Restaurant 2": { "restaurant_id": "R8", "name": "La Petite Maison" },
+                        "Restaurant 3": { "restaurant_id": "R9", "name": "Buddha-Bar" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT7", "name": "Helicopter City Tour" },
+                        "Activity 2": { "activity_id": "ACT8", "name": "Scuba Diving at Atlantis" },
+                        "Activity 3": { "activity_id": "ACT9", "name": "Gold Souk Shopping Tour" }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "DMC_id": 103,
+          "country": "Thailand",
+          "cities": [
+            {
+              "city": "Bangkok",
+              "packages": [
+                {
+                  "days": {
+                    "0": {
+                      "day": 1,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "BKK_H01", "hotel_name": "Mandarin Oriental", "price": 200 },
+                        "Hotel 2": { "hotel_id": "BKK_H02", "hotel_name": "Banyan Tree", "price": 180 },
+                        "Hotel 3": { "hotel_id": "BKK_H03", "hotel_name": "Shangri-La Hotel", "price": 220 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A1", "name": "Grand Palace" },
+                        "Attraction 2": { "attraction_id": "A2", "name": "Wat Arun" },
+                        "Attraction 3": { "attraction_id": "A3", "name": "Floating Market" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R1", "name": "Gaggan" },
+                        "Restaurant 2": { "restaurant_id": "R2", "name": "Nahm" },
+                        "Restaurant 3": { "restaurant_id": "R3", "name": "Sirocco" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT1", "name": "Chao Phraya River Cruise" },
+                        "Activity 2": { "activity_id": "ACT2", "name": "Thai Cooking Class" },
+                        "Activity 3": { "activity_id": "ACT3", "name": "Night Market Tour" }
+                      }
+                    },
+                    "1": {
+                      "day": 2,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "BKK_H04", "hotel_name": "The Peninsula", "price": 250 },
+                        "Hotel 2": { "hotel_id": "BKK_H05", "hotel_name": "Lebua at State Tower", "price": 190 },
+                        "Hotel 3": { "hotel_id": "BKK_H06", "hotel_name": "Conrad Bangkok", "price": 170 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A4", "name": "Chatuchak Market" },
+                        "Attraction 2": { "attraction_id": "A5", "name": "Wat Pho" },
+                        "Attraction 3": { "attraction_id": "A6", "name": "Lumpini Park" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R4", "name": "Bo.lan" },
+                        "Restaurant 2": { "restaurant_id": "R5", "name": "Le Normandie" },
+                        "Restaurant 3": { "restaurant_id": "R6", "name": "Supanniga Eating Room" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT4", "name": "Tuk Tuk City Tour" },
+                        "Activity 2": { "activity_id": "ACT5", "name": "Traditional Thai Massage" },
+                        "Activity 3": { "activity_id": "ACT6", "name": "Chinatown Food Walk" }
+                      }
+                    },
+                    "2": {
+                      "day": 3,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "BKK_H07", "hotel_name": "Siam Kempinski", "price": 280 },
+                        "Hotel 2": { "hotel_id": "BKK_H08", "hotel_name": "The St. Regis Bangkok", "price": 260 },
+                        "Hotel 3": { "hotel_id": "BKK_H09", "hotel_name": "Anantara Riverside", "price": 210 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A7", "name": "Jim Thompson House" },
+                        "Attraction 2": { "attraction_id": "A8", "name": "Asiatique The Riverfront" },
+                        "Attraction 3": { "attraction_id": "A9", "name": "Erawan Shrine" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R7", "name": "Sra Bua" },
+                        "Restaurant 2": { "restaurant_id": "R8", "name": "Jay Fai" },
+                        "Restaurant 3": { "restaurant_id": "R9", "name": "Blue Elephant" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT7", "name": "Muay Thai Training" },
+                        "Activity 2": { "activity_id": "ACT8", "name": "Ayutthaya Day Trip" },
+                        "Activity 3": { "activity_id": "ACT9", "name": "Calypso Cabaret Show" }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Master_DMC_id": 2,
+      "destinations": [
+        {
+          "DMC_id": 201,
+          "country": "France",
+          "cities": [
+            {
+              "city": "Paris",
+              "packages": [
+                {
+                  "days": {
+                    "0": {
+                      "day": 1,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "PAR_H01", "hotel_name": "Ritz Paris", "price": 900 },
+                        "Hotel 2": { "hotel_id": "PAR_H02", "hotel_name": "Hotel Plaza Athenee", "price": 850 },
+                        "Hotel 3": { "hotel_id": "PAR_H03", "hotel_name": "Le Bristol", "price": 880 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A1", "name": "Eiffel Tower" },
+                        "Attraction 2": { "attraction_id": "A2", "name": "Arc de Triomphe" },
+                        "Attraction 3": { "attraction_id": "A3", "name": "Champs-Elysees" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R1", "name": "Le Jules Verne" },
+                        "Restaurant 2": { "restaurant_id": "R2", "name": "Alain Ducasse au Plaza Athenee" },
+                        "Restaurant 3": { "restaurant_id": "R3", "name": "L'Ami Jean" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT1", "name": "Seine River Cruise" },
+                        "Activity 2": { "activity_id": "ACT2", "name": "Macaron Making Class" },
+                        "Activity 3": { "activity_id": "ACT3", "name": "Moulin Rouge Cabaret" }
+                      }
+                    },
+                    "1": {
+                      "day": 2,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "PAR_H04", "hotel_name": "Le Meurice", "price": 850 },
+                        "Hotel 2": { "hotel_id": "PAR_H05", "hotel_name": "Shangri-La Paris", "price": 820 },
+                        "Hotel 3": { "hotel_id": "PAR_H06", "hotel_name": "The Peninsula Paris", "price": 870 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A4", "name": "Louvre Museum" },
+                        "Attraction 2": { "attraction_id": "A5", "name": "Notre-Dame Cathedral" },
+                        "Attraction 3": { "attraction_id": "A6", "name": "Sainte-Chapelle" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R4", "name": "L'Arpege" },
+                        "Restaurant 2": { "restaurant_id": "R5", "name": "Septime" },
+                        "Restaurant 3": { "restaurant_id": "R6", "name": "Bistrot Paul Bert" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT4", "name": "Montmartre Walking Tour" },
+                        "Activity 2": { "activity_id": "ACT5", "name": "Louvre Private Guide" },
+                        "Activity 3": { "activity_id": "ACT6", "name": "Perfume Creation Workshop" }
+                      }
+                    },
+                    "2": {
+                      "day": 3,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "PAR_H07", "hotel_name": "Four Seasons George V", "price": 950 },
+                        "Hotel 2": { "hotel_id": "PAR_H08", "hotel_name": "Mandarin Oriental Paris", "price": 890 },
+                        "Hotel 3": { "hotel_id": "PAR_H09", "hotel_name": "Park Hyatt Paris-Vendome", "price": 800 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A7", "name": "Palace of Versailles" },
+                        "Attraction 2": { "attraction_id": "A8", "name": "Musee d'Orsay" },
+                        "Attraction 3": { "attraction_id": "A9", "name": "Luxembourg Gardens" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R7", "name": "Epicure" },
+                        "Restaurant 2": { "restaurant_id": "R8", "name": "Guy Savoy" },
+                        "Restaurant 3": { "restaurant_id": "R9", "name": "Le Cinq" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT7", "name": "Wine Tasting Masterclass" },
+                        "Activity 2": { "activity_id": "ACT8", "name": "Versailles Bike Tour" },
+                        "Activity 3": { "activity_id": "ACT9", "name": "Catacombs VIP Access" }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "DMC_id": 202,
+          "country": "Italy",
+          "cities": [
+            {
+              "city": "Rome",
+              "packages": [
+                {
+                  "days": {
+                    "0": {
+                      "day": 1,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "ROM_H01", "hotel_name": "Hotel Hassler", "price": 600 },
+                        "Hotel 2": { "hotel_id": "ROM_H02", "hotel_name": "Hotel de Russie", "price": 650 },
+                        "Hotel 3": { "hotel_id": "ROM_H03", "hotel_name": "J.K. Place Roma", "price": 580 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A1", "name": "Colosseum" },
+                        "Attraction 2": { "attraction_id": "A2", "name": "Roman Forum" },
+                        "Attraction 3": { "attraction_id": "A3", "name": "Palatine Hill" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R1", "name": "La Pergola" },
+                        "Restaurant 2": { "restaurant_id": "R2", "name": "Aroma" },
+                        "Restaurant 3": { "restaurant_id": "R3", "name": "Da Enzo al 29" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT1", "name": "Gladiator School Experience" },
+                        "Activity 2": { "activity_id": "ACT2", "name": "Colosseum Underground Tour" },
+                        "Activity 3": { "activity_id": "ACT3", "name": "Vespa City Tour" }
+                      }
+                    },
+                    "1": {
+                      "day": 2,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "ROM_H04", "hotel_name": "Hotel Eden", "price": 550 },
+                        "Hotel 2": { "hotel_id": "ROM_H05", "hotel_name": "Palazzo Manfredi", "price": 530 },
+                        "Hotel 3": { "hotel_id": "ROM_H06", "hotel_name": "Rome Cavalieri", "price": 490 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A4", "name": "Vatican Museums" },
+                        "Attraction 2": { "attraction_id": "A5", "name": "St. Peter's Basilica" },
+                        "Attraction 3": { "attraction_id": "A6", "name": "Castel Sant'Angelo" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R4", "name": "Roscioli" },
+                        "Restaurant 2": { "restaurant_id": "R5", "name": "Il Pagliaccio" },
+                        "Restaurant 3": { "restaurant_id": "R6", "name": "Pizzarium" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT4", "name": "Sistine Chapel Private Tour" },
+                        "Activity 2": { "activity_id": "ACT5", "name": "Papal Audience Experience" },
+                        "Activity 3": { "activity_id": "ACT6", "name": "Trastevere Food Walk" }
+                      }
+                    },
+                    "2": {
+                      "day": 3,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "ROM_H07", "hotel_name": "The St. Regis Rome", "price": 700 },
+                        "Hotel 2": { "hotel_id": "ROM_H08", "hotel_name": "Baglioni Hotel Regina", "price": 620 },
+                        "Hotel 3": { "hotel_id": "ROM_H09", "hotel_name": "Portrait Roma", "price": 680 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A7", "name": "Trevi Fountain" },
+                        "Attraction 2": { "attraction_id": "A8", "name": "Pantheon" },
+                        "Attraction 3": { "attraction_id": "A9", "name": "Piazza Navona" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R7", "name": "Armando al Pantheon" },
+                        "Restaurant 2": { "restaurant_id": "R8", "name": "Imàgo" },
+                        "Restaurant 3": { "restaurant_id": "R9", "name": "Felice a Testaccio" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT7", "name": "Pasta Making Class" },
+                        "Activity 2": { "activity_id": "ACT8", "name": "Borghese Gallery Guided Tour" },
+                        "Activity 3": { "activity_id": "ACT9", "name": "Catacombs Exploration" }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "DMC_id": 203,
+          "country": "UK",
+          "cities": [
+            {
+              "city": "London",
+              "packages": [
+                {
+                  "days": {
+                    "0": {
+                      "day": 1,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "LON_H01", "hotel_name": "The Savoy", "price": 800 },
+                        "Hotel 2": { "hotel_id": "LON_H02", "hotel_name": "Rosewood London", "price": 750 },
+                        "Hotel 3": { "hotel_id": "LON_H03", "hotel_name": "The Dorchester", "price": 780 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A1", "name": "Tower of London" },
+                        "Attraction 2": { "attraction_id": "A2", "name": "Tower Bridge" },
+                        "Attraction 3": { "attraction_id": "A3", "name": "The Shard" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R1", "name": "Sketch" },
+                        "Restaurant 2": { "restaurant_id": "R2", "name": "Dinner by Heston Blumenthal" },
+                        "Restaurant 3": { "restaurant_id": "R3", "name": "Duck & Waffle" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT1", "name": "Thames Speedboat Tour" },
+                        "Activity 2": { "activity_id": "ACT2", "name": "Crown Jewels Private Viewing" },
+                        "Activity 3": { "activity_id": "ACT3", "name": "Jack the Ripper Walk" }
+                      }
+                    },
+                    "1": {
+                      "day": 2,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "LON_H04", "hotel_name": "The Ritz London", "price": 850 },
+                        "Hotel 2": { "hotel_id": "LON_H05", "hotel_name": "The Connaught", "price": 820 },
+                        "Hotel 3": { "hotel_id": "LON_H06", "hotel_name": "Corinthia London", "price": 800 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A4", "name": "British Museum" },
+                        "Attraction 2": { "attraction_id": "A5", "name": "Buckingham Palace" },
+                        "Attraction 3": { "attraction_id": "A6", "name": "Hyde Park" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R4", "name": "Gordon Ramsay" },
+                        "Restaurant 2": { "restaurant_id": "R5", "name": "Core by Clare Smyth" },
+                        "Restaurant 3": { "restaurant_id": "R6", "name": "St. John" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT4", "name": "West End Theatre Show" },
+                        "Activity 2": { "activity_id": "ACT5", "name": "Changing of the Guard Tour" },
+                        "Activity 3": { "activity_id": "ACT6", "name": "Harry Potter Studio Tour" }
+                      }
+                    },
+                    "2": {
+                      "day": 3,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "LON_H07", "hotel_name": "Claridge's", "price": 900 },
+                        "Hotel 2": { "hotel_id": "LON_H08", "hotel_name": "Mandarin Oriental Hyde Park", "price": 880 },
+                        "Hotel 3": { "hotel_id": "LON_H09", "hotel_name": "Shangri-La The Shard", "price": 850 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A7", "name": "London Eye" },
+                        "Attraction 2": { "attraction_id": "A8", "name": "Westminster Abbey" },
+                        "Attraction 3": { "attraction_id": "A9", "name": "Tate Modern" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R7", "name": "Dishoom" },
+                        "Restaurant 2": { "restaurant_id": "R8", "name": "Hakkasan Mayfair" },
+                        "Restaurant 3": { "restaurant_id": "R9", "name": "Rules" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT7", "name": "Afternoon Tea Experience" },
+                        "Activity 2": { "activity_id": "ACT8", "name": "London Eye VIP Pod" },
+                        "Activity 3": { "activity_id": "ACT9", "name": "Borough Market Food Tasting" }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Master_DMC_id": 3,
+      "destinations": [
+        {
+          "DMC_id": 301,
+          "country": "USA",
+          "cities": [
+            {
+              "city": "New York",
+              "packages": [
+                {
+                  "days": {
+                    "0": {
+                      "day": 1,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "NYC_H01", "hotel_name": "The Plaza", "price": 750 },
+                        "Hotel 2": { "hotel_id": "NYC_H02", "hotel_name": "The Pierre", "price": 650 },
+                        "Hotel 3": { "hotel_id": "NYC_H03", "hotel_name": "Baccarat Hotel", "price": 800 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A1", "name": "Statue of Liberty" },
+                        "Attraction 2": { "attraction_id": "A2", "name": "Ellis Island" },
+                        "Attraction 3": { "attraction_id": "A3", "name": "One World Observatory" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R1", "name": "Le Bernardin" },
+                        "Restaurant 2": { "restaurant_id": "R2", "name": "Eleven Madison Park" },
+                        "Restaurant 3": { "restaurant_id": "R3", "name": "Carmine's" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT1", "name": "Broadway Show" },
+                        "Activity 2": { "activity_id": "ACT2", "name": "Statue of Liberty Crown Tour" },
+                        "Activity 3": { "activity_id": "ACT3", "name": "Wall Street Walking Tour" }
+                      }
+                    },
+                    "1": {
+                      "day": 2,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "NYC_H04", "hotel_name": "St. Regis New York", "price": 800 },
+                        "Hotel 2": { "hotel_id": "NYC_H05", "hotel_name": "The Langham", "price": 720 },
+                        "Hotel 3": { "hotel_id": "NYC_H06", "hotel_name": "Mandarin Oriental NYC", "price": 780 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A4", "name": "Central Park" },
+                        "Attraction 2": { "attraction_id": "A5", "name": "American Museum of Natural History" },
+                        "Attraction 3": { "attraction_id": "A6", "name": "Guggenheim Museum" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R4", "name": "Katz's Delicatessen" },
+                        "Restaurant 2": { "restaurant_id": "R5", "name": "Per Se" },
+                        "Restaurant 3": { "restaurant_id": "R6", "name": "Tavern on the Green" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT4", "name": "Helicopter Tour NYC" },
+                        "Activity 2": { "activity_id": "ACT5", "name": "Central Park Carriage Ride" },
+                        "Activity 3": { "activity_id": "ACT6", "name": "Harlem Gospel Choir Experience" }
+                      }
+                    },
+                    "2": {
+                      "day": 3,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "NYC_H07", "hotel_name": "Waldorf Astoria", "price": 700 },
+                        "Hotel 2": { "hotel_id": "NYC_H08", "hotel_name": "The Carlyle", "price": 680 },
+                        "Hotel 3": { "hotel_id": "NYC_H09", "hotel_name": "Four Seasons Downtown", "price": 710 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A7", "name": "Empire State Building" },
+                        "Attraction 2": { "attraction_id": "A8", "name": "Times Square" },
+                        "Attraction 3": { "attraction_id": "A9", "name": "MoMA" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R7", "name": "Peter Luger Steak House" },
+                        "Restaurant 2": { "restaurant_id": "R8", "name": "Gramercy Tavern" },
+                        "Restaurant 3": { "restaurant_id": "R9", "name": "Los Tacos No. 1" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT7", "name": "Metropolitan Museum Tour" },
+                        "Activity 2": { "activity_id": "ACT8", "name": "Brooklyn Bridge Bike Tour" },
+                        "Activity 3": { "activity_id": "ACT9", "name": "Top of the Rock Sunset Viewing" }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "DMC_id": 302,
+          "country": "Canada",
+          "cities": [
+            {
+              "city": "Toronto",
+              "packages": [
+                {
+                  "days": {
+                    "0": {
+                      "day": 1,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "YYZ_H01", "hotel_name": "Fairmont Royal York", "price": 400 },
+                        "Hotel 2": { "hotel_id": "YYZ_H02", "hotel_name": "Shangri-La Toronto", "price": 450 },
+                        "Hotel 3": { "hotel_id": "YYZ_H03", "hotel_name": "St. Regis Toronto", "price": 480 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A1", "name": "CN Tower" },
+                        "Attraction 2": { "attraction_id": "A2", "name": "Rogers Centre" },
+                        "Attraction 3": { "attraction_id": "A3", "name": "Hockey Hall of Fame" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R1", "name": "Alo Restaurant" },
+                        "Restaurant 2": { "restaurant_id": "R2", "name": "Edulis" },
+                        "Restaurant 3": { "restaurant_id": "R3", "name": "Richmond Station" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT1", "name": "EdgeWalk at CN Tower" },
+                        "Activity 2": { "activity_id": "ACT2", "name": "Brewery Tour in Entertainment District" },
+                        "Activity 3": { "activity_id": "ACT3", "name": "St. Lawrence Market Food Tour" }
+                      }
+                    },
+                    "1": {
+                      "day": 2,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "YYZ_H04", "hotel_name": "The Ritz-Carlton", "price": 550 },
+                        "Hotel 2": { "hotel_id": "YYZ_H05", "hotel_name": "Four Seasons Toronto", "price": 600 },
+                        "Hotel 3": { "hotel_id": "YYZ_H06", "hotel_name": "The Hazelton Hotel", "price": 520 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A4", "name": "Royal Ontario Museum" },
+                        "Attraction 2": { "attraction_id": "A5", "name": "Art Gallery of Ontario" },
+                        "Attraction 3": { "attraction_id": "A6", "name": "Casa Loma" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R4", "name": "Canoe" },
+                        "Restaurant 2": { "restaurant_id": "R5", "name": "Buca" },
+                        "Restaurant 3": { "restaurant_id": "R6", "name": "Bar Isabel" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT4", "name": "Distillery District Segway Tour" },
+                        "Activity 2": { "activity_id": "ACT5", "name": "Casa Loma Escape Room" },
+                        "Activity 3": { "activity_id": "ACT6", "name": "Kensington Market Walking Tour" }
+                      }
+                    },
+                    "2": {
+                      "day": 3,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "YYZ_H07", "hotel_name": "Hotel X Toronto", "price": 350 },
+                        "Hotel 2": { "hotel_id": "YYZ_H08", "hotel_name": "Bisha Hotel", "price": 380 },
+                        "Hotel 3": { "hotel_id": "YYZ_H09", "hotel_name": "1 Hotel Toronto", "price": 410 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A7", "name": "Ripley's Aquarium" },
+                        "Attraction 2": { "attraction_id": "A8", "name": "Toronto Islands" },
+                        "Attraction 3": { "attraction_id": "A9", "name": "High Park" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R7", "name": "Scaramouche" },
+                        "Restaurant 2": { "restaurant_id": "R8", "name": "Pai Northern Thai" },
+                        "Restaurant 3": { "restaurant_id": "R9", "name": "Jacobs & Co. Steakhouse" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT7", "name": "Lake Ontario Boat Cruise" },
+                        "Activity 2": { "activity_id": "ACT8", "name": "Toronto Islands Bike Rental" },
+                        "Activity 3": { "activity_id": "ACT9", "name": "Helicopter Ride over Toronto" }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "DMC_id": 303,
+          "country": "Mexico",
+          "cities": [
+            {
+              "city": "Mexico City",
+              "packages": [
+                {
+                  "days": {
+                    "0": {
+                      "day": 1,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "MEX_H01", "hotel_name": "Four Seasons CDMX", "price": 450 },
+                        "Hotel 2": { "hotel_id": "MEX_H02", "hotel_name": "The Ritz-Carlton", "price": 480 },
+                        "Hotel 3": { "hotel_id": "MEX_H03", "hotel_name": "Sofitel Mexico City", "price": 420 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A1", "name": "Teotihuacan Pyramids" },
+                        "Attraction 2": { "attraction_id": "A2", "name": "Zocalo" },
+                        "Attraction 3": { "attraction_id": "A3", "name": "Metropolitan Cathedral" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R1", "name": "Pujol" },
+                        "Restaurant 2": { "restaurant_id": "R2", "name": "Maximo Bistrot" },
+                        "Restaurant 3": { "restaurant_id": "R3", "name": "El Cardenal" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT1", "name": "Hot Air Balloon over Pyramids" },
+                        "Activity 2": { "activity_id": "ACT2", "name": "Historic Center Walking Tour" },
+                        "Activity 3": { "activity_id": "ACT3", "name": "Mezcal Tasting Experience" }
+                      }
+                    },
+                    "1": {
+                      "day": 2,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "MEX_H04", "hotel_name": "The St. Regis", "price": 500 },
+                        "Hotel 2": { "hotel_id": "MEX_H05", "hotel_name": "W Mexico City", "price": 380 },
+                        "Hotel 3": { "hotel_id": "MEX_H06", "hotel_name": "Hyatt Regency Polanco", "price": 350 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A4", "name": "Frida Kahlo Museum" },
+                        "Attraction 2": { "attraction_id": "A5", "name": "Xochimilco" },
+                        "Attraction 3": { "attraction_id": "A6", "name": "UNAM Campus" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R4", "name": "Quintonil" },
+                        "Restaurant 2": { "restaurant_id": "R5", "name": "Sud777" },
+                        "Restaurant 3": { "restaurant_id": "R6", "name": "Contramar" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT4", "name": "Coyoacán Walking Tour" },
+                        "Activity 2": { "activity_id": "ACT5", "name": "Trajinera Boat Ride in Xochimilco" },
+                        "Activity 3": { "activity_id": "ACT6", "name": "Mexican Cooking Class" }
+                      }
+                    },
+                    "2": {
+                      "day": 3,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "MEX_H07", "hotel_name": "Las Alcobas", "price": 400 },
+                        "Hotel 2": { "hotel_id": "MEX_H08", "hotel_name": "Camino Real Polanco", "price": 320 },
+                        "Hotel 3": { "hotel_id": "MEX_H09", "hotel_name": "Condesa DF", "price": 300 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A7", "name": "Chapultepec Castle" },
+                        "Attraction 2": { "attraction_id": "A8", "name": "National Museum of Anthropology" },
+                        "Attraction 3": { "attraction_id": "A9", "name": "Palacio de Bellas Artes" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R7", "name": "Rosetta" },
+                        "Restaurant 2": { "restaurant_id": "R8", "name": "Dulce Patria" },
+                        "Restaurant 3": { "restaurant_id": "R9", "name": "Azul Historico" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT7", "name": "Lucha Libre Experience" },
+                        "Activity 2": { "activity_id": "ACT8", "name": "Anthropology Museum Guided Tour" },
+                        "Activity 3": { "activity_id": "ACT9", "name": "Street Art Bike Tour" }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Master_DMC_id": 4,
+      "destinations": [
+        {
+          "DMC_id": 401,
+          "country": "Brazil",
+          "cities": [
+            {
+              "city": "Rio de Janeiro",
+              "packages": [
+                {
+                  "days": {
+                    "0": {
+                      "day": 1,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "RIO_H01", "hotel_name": "Copacabana Palace", "price": 550 },
+                        "Hotel 2": { "hotel_id": "RIO_H02", "hotel_name": "JW Marriott Rio", "price": 420 },
+                        "Hotel 3": { "hotel_id": "RIO_H03", "hotel_name": "Hilton Copacabana", "price": 390 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A1", "name": "Christ the Redeemer" },
+                        "Attraction 2": { "attraction_id": "A2", "name": "Tijuca National Park" },
+                        "Attraction 3": { "attraction_id": "A3", "name": "Maracana Stadium" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R1", "name": "Olympe" },
+                        "Restaurant 2": { "restaurant_id": "R2", "name": "Churrascaria Palace" },
+                        "Restaurant 3": { "restaurant_id": "R3", "name": "Marius Degustare" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT1", "name": "Corcovado Train Ride" },
+                        "Activity 2": { "activity_id": "ACT2", "name": "Jeep Tour in Tijuca Forest" },
+                        "Activity 3": { "activity_id": "ACT3", "name": "Maracana Behind the Scenes" }
+                      }
+                    },
+                    "1": {
+                      "day": 2,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "RIO_H04", "hotel_name": "Fasano Rio", "price": 600 },
+                        "Hotel 2": { "hotel_id": "RIO_H05", "hotel_name": "Hotel Santa Teresa", "price": 450 },
+                        "Hotel 3": { "hotel_id": "RIO_H06", "hotel_name": "Grand Hyatt Rio", "price": 400 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A4", "name": "Sugarloaf Mountain" },
+                        "Attraction 2": { "attraction_id": "A5", "name": "Selaron Steps" },
+                        "Attraction 3": { "attraction_id": "A6", "name": "Lapa Arches" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R4", "name": "Fogo de Chão" },
+                        "Restaurant 2": { "restaurant_id": "R5", "name": "Oro" },
+                        "Restaurant 3": { "restaurant_id": "R6", "name": "Bar do Mineiro" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT4", "name": "Cable Car at Sunset" },
+                        "Activity 2": { "activity_id": "ACT5", "name": "Santa Teresa Walking Tour" },
+                        "Activity 3": { "activity_id": "ACT6", "name": "Caipirinha Mixology Class" }
+                      }
+                    },
+                    "2": {
+                      "day": 3,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "RIO_H07", "hotel_name": "Emiliano Rio", "price": 500 },
+                        "Hotel 2": { "hotel_id": "RIO_H08", "hotel_name": "Fairmont Rio de Janeiro", "price": 480 },
+                        "Hotel 3": { "hotel_id": "RIO_H09", "hotel_name": "Vila Gale Rio", "price": 300 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A7", "name": "Ipanema Beach" },
+                        "Attraction 2": { "attraction_id": "A8", "name": "Botanical Garden" },
+                        "Attraction 3": { "attraction_id": "A9", "name": "Museum of Tomorrow" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R7", "name": "Aprazível" },
+                        "Restaurant 2": { "restaurant_id": "R8", "name": "Cervantes" },
+                        "Restaurant 3": { "restaurant_id": "R9", "name": "Lasai" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT7", "name": "Samba Class Experience" },
+                        "Activity 2": { "activity_id": "ACT8", "name": "Guanabara Bay Schooner Tour" },
+                        "Activity 3": { "activity_id": "ACT9", "name": "Favela Rocinha Tour" }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "DMC_id": 402,
+          "country": "South Africa",
+          "cities": [
+            {
+              "city": "Cape Town",
+              "packages": [
+                {
+                  "days": {
+                    "0": {
+                      "day": 1,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "CPT_H01", "hotel_name": "The Silo Hotel", "price": 800 },
+                        "Hotel 2": { "hotel_id": "CPT_H02", "hotel_name": "Belmond Mount Nelson", "price": 650 },
+                        "Hotel 3": { "hotel_id": "CPT_H03", "hotel_name": "Cape Grace", "price": 700 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A1", "name": "Table Mountain" },
+                        "Attraction 2": { "attraction_id": "A2", "name": "Kirstenbosch Botanical Gardens" },
+                        "Attraction 3": { "attraction_id": "A3", "name": "Bo-Kaap" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R1", "name": "The Test Kitchen" },
+                        "Restaurant 2": { "restaurant_id": "R2", "name": "Gold Restaurant" },
+                        "Restaurant 3": { "restaurant_id": "R3", "name": "Belly of the Beast" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT1", "name": "Table Mountain Aerial Cableway" },
+                        "Activity 2": { "activity_id": "ACT2", "name": "Bo-Kaap Cooking Class" },
+                        "Activity 3": { "activity_id": "ACT3", "name": "Sunset Champagne Cruise" }
+                      }
+                    },
+                    "1": {
+                      "day": 2,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "CPT_H04", "hotel_name": "One&Only Cape Town", "price": 750 },
+                        "Hotel 2": { "hotel_id": "CPT_H05", "hotel_name": "Taj Cape Town", "price": 500 },
+                        "Hotel 3": { "hotel_id": "CPT_H06", "hotel_name": "The Twelve Apostles", "price": 600 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A4", "name": "Robben Island" },
+                        "Attraction 2": { "attraction_id": "A5", "name": "V&A Waterfront" },
+                        "Attraction 3": { "attraction_id": "A6", "name": "Zeitz MOCAA" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R4", "name": "La Colombe" },
+                        "Restaurant 2": { "restaurant_id": "R5", "name": "FYN Restaurant" },
+                        "Restaurant 3": { "restaurant_id": "R6", "name": "Willoughby & Co" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT4", "name": "Historical Prison Tour" },
+                        "Activity 2": { "activity_id": "ACT5", "name": "Helicopter Flight over Two Oceans" },
+                        "Activity 3": { "activity_id": "ACT6", "name": "Diamond Museum Tour" }
+                      }
+                    },
+                    "2": {
+                      "day": 3,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "CPT_H07", "hotel_name": "Ellerman House", "price": 900 },
+                        "Hotel 2": { "hotel_id": "CPT_H08", "hotel_name": "Radisson Blu Waterfront", "price": 450 },
+                        "Hotel 3": { "hotel_id": "CPT_H09", "hotel_name": "The Bay Hotel", "price": 400 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A7", "name": "Cape of Good Hope" },
+                        "Attraction 2": { "attraction_id": "A8", "name": "Boulders Beach" },
+                        "Attraction 3": { "attraction_id": "A9", "name": "Chapman's Peak Drive" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R7", "name": "Kloof Street House" },
+                        "Restaurant 2": { "restaurant_id": "R8", "name": "Wolfgat" },
+                        "Restaurant 3": { "restaurant_id": "R9", "name": "Harbour House" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT7", "name": "Penguin Colony Visit" },
+                        "Activity 2": { "activity_id": "ACT8", "name": "Cape Point Funicular Ride" },
+                        "Activity 3": { "activity_id": "ACT9", "name": "Stellenbosch Wine Tasting Tour" }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "DMC_id": 403,
+          "country": "Kenya",
+          "cities": [
+            {
+              "city": "Nairobi",
+              "packages": [
+                {
+                  "days": {
+                    "0": {
+                      "day": 1,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "NBO_H01", "hotel_name": "Giraffe Manor", "price": 950 },
+                        "Hotel 2": { "hotel_id": "NBO_H02", "hotel_name": "Villa Rosa Kempinski", "price": 450 },
+                        "Hotel 3": { "hotel_id": "NBO_H03", "hotel_name": "Nairobi Serena Hotel", "price": 350 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A1", "name": "Nairobi National Park" },
+                        "Attraction 2": { "attraction_id": "A2", "name": "Nairobi National Museum" },
+                        "Attraction 3": { "attraction_id": "A3", "name": "Bomas of Kenya" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R1", "name": "Carnivore Restaurant" },
+                        "Restaurant 2": { "restaurant_id": "R2", "name": "Tamarind" },
+                        "Restaurant 3": { "restaurant_id": "R3", "name": "Mama Oliech" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT1", "name": "Morning Game Drive" },
+                        "Activity 2": { "activity_id": "ACT2", "name": "Traditional Dance Performance" },
+                        "Activity 3": { "activity_id": "ACT3", "name": "Maasai Market Shopping" }
+                      }
+                    },
+                    "1": {
+                      "day": 2,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "NBO_H04", "hotel_name": "Hemingways Nairobi", "price": 400 },
+                        "Hotel 2": { "hotel_id": "NBO_H05", "hotel_name": "Tribe Hotel", "price": 380 },
+                        "Hotel 3": { "hotel_id": "NBO_H06", "hotel_name": "Sankara Nairobi", "price": 300 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A4", "name": "David Sheldrick Wildlife Trust" },
+                        "Attraction 2": { "attraction_id": "A5", "name": "Karura Forest" },
+                        "Attraction 3": { "attraction_id": "A6", "name": "Kazuri Beads Factory" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R4", "name": "Talisman" },
+                        "Restaurant 2": { "restaurant_id": "R5", "name": "Fogo Gaucho" },
+                        "Restaurant 3": { "restaurant_id": "R6", "name": "Java House" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT4", "name": "Elephant Orphanage Visit" },
+                        "Activity 2": { "activity_id": "ACT5", "name": "Karura Forest Bike Ride" },
+                        "Activity 3": { "activity_id": "ACT6", "name": "Pottery Workshop" }
+                      }
+                    },
+                    "2": {
+                      "day": 3,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "NBO_H07", "hotel_name": "Fairmont The Norfolk", "price": 350 },
+                        "Hotel 2": { "hotel_id": "NBO_H08", "hotel_name": "Radisson Blu Nairobi", "price": 320 },
+                        "Hotel 3": { "hotel_id": "NBO_H09", "hotel_name": "Crowne Plaza Nairobi", "price": 280 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A7", "name": "Karen Blixen Museum" },
+                        "Attraction 2": { "attraction_id": "A8", "name": "Ngong Hills" },
+                        "Attraction 3": { "attraction_id": "A9", "name": "KICC Rooftop" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R7", "name": "Seven Seafood & Grill" },
+                        "Restaurant 2": { "restaurant_id": "R8", "name": "About Thyme" },
+                        "Restaurant 3": { "restaurant_id": "R9", "name": "Kosewe Ranalo Foods" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT7", "name": "Coffee Farm Tour" },
+                        "Activity 2": { "activity_id": "ACT8", "name": "Ngong Hills Hiking" },
+                        "Activity 3": { "activity_id": "ACT9", "name": "Nairobi Skyline Photography" }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Master_DMC_id": 5,
+      "destinations": [
+        {
+          "DMC_id": 501,
+          "country": "Australia",
+          "cities": [
+            {
+              "city": "Sydney",
+              "packages": [
+                {
+                  "days": {
+                    "0": {
+                      "day": 1,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "SYD_H01", "hotel_name": "Park Hyatt Sydney", "price": 600 },
+                        "Hotel 2": { "hotel_id": "SYD_H02", "hotel_name": "Four Seasons Sydney", "price": 550 },
+                        "Hotel 3": { "hotel_id": "SYD_H03", "hotel_name": "InterContinental Sydney", "price": 480 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A1", "name": "Sydney Opera House" },
+                        "Attraction 2": { "attraction_id": "A2", "name": "Royal Botanic Garden" },
+                        "Attraction 3": { "attraction_id": "A3", "name": "Darling Harbour" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R1", "name": "Quay" },
+                        "Restaurant 2": { "restaurant_id": "R2", "name": "Aria Restaurant" },
+                        "Restaurant 3": { "restaurant_id": "R3", "name": "Mr. Wong" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT1", "name": "Opera House Backstage Tour" },
+                        "Activity 2": { "activity_id": "ACT2", "name": "Harbour Cruise with Dinner" },
+                        "Activity 3": { "activity_id": "ACT3", "name": "Aboriginal Heritage Walk" }
+                      }
+                    },
+                    "1": {
+                      "day": 2,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "SYD_H04", "hotel_name": "Shangri-La Sydney", "price": 450 },
+                        "Hotel 2": { "hotel_id": "SYD_H05", "hotel_name": "The Fullerton Hotel", "price": 420 },
+                        "Hotel 3": { "hotel_id": "SYD_H06", "hotel_name": "Sofitel Sydney Darling Harbour", "price": 400 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A4", "name": "Sydney Harbour Bridge" },
+                        "Attraction 2": { "attraction_id": "A5", "name": "Taronga Zoo" },
+                        "Attraction 3": { "attraction_id": "A6", "name": "The Rocks" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R4", "name": "Bennelong" },
+                        "Restaurant 2": { "restaurant_id": "R5", "name": "Tetsuya's" },
+                        "Restaurant 3": { "restaurant_id": "R6", "name": "Cafe Sydney" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT4", "name": "BridgeClimb Sydney" },
+                        "Activity 2": { "activity_id": "ACT5", "name": "Zoo VIP Behind the Scenes" },
+                        "Activity 3": { "activity_id": "ACT6", "name": "Ghost Tour of The Rocks" }
+                      }
+                    },
+                    "2": {
+                      "day": 3,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "SYD_H07", "hotel_name": "The Langham", "price": 500 },
+                        "Hotel 2": { "hotel_id": "SYD_H08", "hotel_name": "Pier One Sydney Harbour", "price": 380 },
+                        "Hotel 3": { "hotel_id": "SYD_H09", "hotel_name": "QT Sydney", "price": 350 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A7", "name": "Bondi Beach" },
+                        "Attraction 2": { "attraction_id": "A8", "name": "Manly Beach" },
+                        "Attraction 3": { "attraction_id": "A9", "name": "Art Gallery of NSW" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R7", "name": "Icebergs Dining Room" },
+                        "Restaurant 2": { "restaurant_id": "R8", "name": "Est." },
+                        "Restaurant 3": { "restaurant_id": "R9", "name": "Sokyo" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT7", "name": "Coastal Walk to Coogee" },
+                        "Activity 2": { "activity_id": "ACT8", "name": "Surfing Lesson at Bondi" },
+                        "Activity 3": { "activity_id": "ACT9", "name": "Ferry Ride to Manly" }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "DMC_id": 502,
+          "country": "Japan",
+          "cities": [
+            {
+              "city": "Tokyo",
+              "packages": [
+                {
+                  "days": {
+                    "0": {
+                      "day": 1,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "TYO_H01", "hotel_name": "Aman Tokyo", "price": 1000 },
+                        "Hotel 2": { "hotel_id": "TYO_H02", "hotel_name": "Mandarin Oriental Tokyo", "price": 850 },
+                        "Hotel 3": { "hotel_id": "TYO_H03", "hotel_name": "Palace Hotel Tokyo", "price": 750 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A1", "name": "Senso-ji Temple" },
+                        "Attraction 2": { "attraction_id": "A2", "name": "Tokyo Skytree" },
+                        "Attraction 3": { "attraction_id": "A3", "name": "Ueno Park" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R1", "name": "Sukiyabashi Jiro" },
+                        "Restaurant 2": { "restaurant_id": "R2", "name": "Kobe Beef 511" },
+                        "Restaurant 3": { "restaurant_id": "R3", "name": "Ichiran Ramen" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT1", "name": "Asakusa Rickshaw Tour" },
+                        "Activity 2": { "activity_id": "ACT2", "name": "Sumida River Cruise" },
+                        "Activity 3": { "activity_id": "ACT3", "name": "Samurai Sword Experience" }
+                      }
+                    },
+                    "1": {
+                      "day": 2,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "TYO_H04", "hotel_name": "Park Hyatt Tokyo", "price": 800 },
+                        "Hotel 2": { "hotel_id": "TYO_H05", "hotel_name": "Conrad Tokyo", "price": 600 },
+                        "Hotel 3": { "hotel_id": "TYO_H06", "hotel_name": "The Peninsula Tokyo", "price": 700 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A4", "name": "Shibuya Crossing" },
+                        "Attraction 2": { "attraction_id": "A5", "name": "Takeshita Street (Harajuku)" },
+                        "Attraction 3": { "attraction_id": "A6", "name": "Shinjuku Gyoen" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R4", "name": "Narisawa" },
+                        "Restaurant 2": { "restaurant_id": "R5", "name": "Kyubey" },
+                        "Restaurant 3": { "restaurant_id": "R6", "name": "Robot Restaurant" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT4", "name": "Tokyo Night Photography Tour" },
+                        "Activity 2": { "activity_id": "ACT5", "name": "Harajuku Kawaii Fashion Tour" },
+                        "Activity 3": { "activity_id": "ACT6", "name": "Izakaya Food Hopping" }
+                      }
+                    },
+                    "2": {
+                      "day": 3,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "TYO_H07", "hotel_name": "The Ritz-Carlton Tokyo", "price": 900 },
+                        "Hotel 2": { "hotel_id": "TYO_H08", "hotel_name": "Andaz Tokyo", "price": 650 },
+                        "Hotel 3": { "hotel_id": "TYO_H09", "hotel_name": "Hoshinoya Tokyo", "price": 880 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A7", "name": "Meiji Shrine" },
+                        "Attraction 2": { "attraction_id": "A8", "name": "Tsukiji Outer Market" },
+                        "Attraction 3": { "attraction_id": "A9", "name": "teamLab Planets" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R7", "name": "Ryugin" },
+                        "Restaurant 2": { "restaurant_id": "R8", "name": "Sushi Saito" },
+                        "Restaurant 3": { "restaurant_id": "R9", "name": "Tonkatsu Maisen" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT7", "name": "Traditional Tea Ceremony" },
+                        "Activity 2": { "activity_id": "ACT8", "name": "Sushi Making Class" },
+                        "Activity 3": { "activity_id": "ACT9", "name": "Digital Art Exhibition Visit" }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "DMC_id": 503,
+          "country": "Singapore",
+          "cities": [
+            {
+              "city": "Singapore",
+              "packages": [
+                {
+                  "days": {
+                    "0": {
+                      "day": 1,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "SIN_H01", "hotel_name": "Marina Bay Sands", "price": 600 },
+                        "Hotel 2": { "hotel_id": "SIN_H02", "hotel_name": "The Ritz-Carlton Millenia", "price": 550 },
+                        "Hotel 3": { "hotel_id": "SIN_H03", "hotel_name": "Mandarin Oriental", "price": 450 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A1", "name": "Gardens by the Bay" },
+                        "Attraction 2": { "attraction_id": "A2", "name": "Singapore Flyer" },
+                        "Attraction 3": { "attraction_id": "A3", "name": "ArtScience Museum" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R1", "name": "Odette" },
+                        "Restaurant 2": { "restaurant_id": "R2", "name": "Waku Ghin" },
+                        "Restaurant 3": { "restaurant_id": "R3", "name": "Jumbo Seafood" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT1", "name": "Cloud Forest Night Tour" },
+                        "Activity 2": { "activity_id": "ACT2", "name": "River Cruise on Bumboat" },
+                        "Activity 3": { "activity_id": "ACT3", "name": "Light and Water Show Viewing" }
+                      }
+                    },
+                    "1": {
+                      "day": 2,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "SIN_H04", "hotel_name": "Raffles Hotel", "price": 750 },
+                        "Hotel 2": { "hotel_id": "SIN_H05", "hotel_name": "Shangri-La Hotel", "price": 400 },
+                        "Hotel 3": { "hotel_id": "SIN_H06", "hotel_name": "W Singapore - Sentosa Cove", "price": 480 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A4", "name": "Sentosa Island" },
+                        "Attraction 2": { "attraction_id": "A5", "name": "Universal Studios" },
+                        "Attraction 3": { "attraction_id": "A6", "name": "S.E.A. Aquarium" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R4", "name": "Burnt Ends" },
+                        "Restaurant 2": { "restaurant_id": "R5", "name": "Lau Pa Sat" },
+                        "Restaurant 3": { "restaurant_id": "R6", "name": "Tippling Club" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT4", "name": "Universal Studios Fast Pass" },
+                        "Activity 2": { "activity_id": "ACT5", "name": "Cable Car Ride to Sentosa" },
+                        "Activity 3": { "activity_id": "ACT6", "name": "Singapore Sling Tasting" }
+                      }
+                    },
+                    "2": {
+                      "day": 3,
+                      "hotels": {
+                        "Hotel 1": { "hotel_id": "SIN_H07", "hotel_name": "Capella Singapore", "price": 800 },
+                        "Hotel 2": { "hotel_id": "SIN_H08", "hotel_name": "The Fullerton Hotel", "price": 500 },
+                        "Hotel 3": { "hotel_id": "SIN_H09", "hotel_name": "Andaz Singapore", "price": 380 }
+                      },
+                      "attractions": {
+                        "Attraction 1": { "attraction_id": "A7", "name": "Singapore Zoo" },
+                        "Attraction 2": { "attraction_id": "A8", "name": "Night Safari" },
+                        "Attraction 3": { "attraction_id": "A9", "name": "Botanic Gardens" }
+                      },
+                      "restaurants": {
+                        "Restaurant 1": { "restaurant_id": "R7", "name": "Les Amis" },
+                        "Restaurant 2": { "restaurant_id": "R8", "name": "Corner House" },
+                        "Restaurant 3": { "restaurant_id": "R9", "name": "Newton Food Centre" }
+                      },
+                      "activities": {
+                        "Activity 1": { "activity_id": "ACT7", "name": "Night Safari VIP Experience" },
+                        "Activity 2": { "activity_id": "ACT8", "name": "Breakfast with Orangutans" },
+                        "Activity 3": { "activity_id": "ACT9", "name": "Orchid Garden Walking Tour" }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
