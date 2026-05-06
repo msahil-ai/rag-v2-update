@@ -4,10 +4,7 @@ import random
 import chromadb
 from chromadb.utils import embedding_functions
 from post_response_to_api import send_data
-from datetime import date 
-
-# Turn off ChromaDB telemetry here too
-os.environ["ANONYMIZED_TELEMETRY"] = "False"
+from datetime import date, timedelta #update for date handling
 
 # 1. Module-Level Initialization 
 client = chromadb.PersistentClient(path="./chroma_db")
@@ -19,25 +16,16 @@ def find_best_package(email_json_path):
     
     with open(email_json_path, 'r', encoding='utf-8') as f:
         request = json.load(f)
+        sender_email = request.get("sender_email") #extracting sender email from the JSON for later use
 
-    # Safely get the sender email
-    sender_email = request.get("sender_email", "unknown@email.com")
-
-    # Start Date Logic with "1st of Next Month" Fallback
-    start_date = request.get("start_date")
-    
-    if not start_date:
-        today = date.today()
-        
-        if today.month == 12:
-            next_month = 1
-            next_year = today.year + 1
-        else:
-            next_month = today.month + 1
-            next_year = today.year
-            
-        first_of_next_month = date(next_year, next_month, 1)
-        start_date = first_of_next_month.strftime("%Y-%m-%d")
+        start_date = request.get("start_date")
+        if not start_date:
+            today = date.today()
+        # weekday() returns 0 for Monday, 1 for Tuesday... 6 for Sunday.
+        # This formula guarantees it always finds the *next* Monday (1 to 7 days away).
+            days_ahead = 7 - today.weekday() 
+            coming_monday = today + timedelta(days=days_ahead)
+            start_date = coming_monday.strftime("%Y-%m-%d")
 
     target_country = (request.get("destination_country") or "").strip().lower()
     target_city = (request.get("destination_city") or "").strip().lower()
@@ -54,7 +42,7 @@ def find_best_package(email_json_path):
 
     print(f"Searching Vector DB for: {target_city.title()}, {target_country.title()} for ~{requested_days} days...")
 
-    # Strict Pre-Filtering (Country -> City ONLY)
+    # 2. Strict Pre-Filtering (Country -> City ONLY)
     strict_filters = {
         "$and": [
             {"country": {"$eq": target_country}}, 
@@ -73,7 +61,7 @@ def find_best_package(email_json_path):
             print("No matches found for that location.")
             return None
 
-        # Find the closest match and gather ties for Random Selection
+        # 4. Find the closest match and gather ties for Random Selection
         best_matches = []
         min_diff_absolute = float('inf')
         best_actual_difference = 0
@@ -91,53 +79,43 @@ def find_best_package(email_json_path):
             elif abs_diff == min_diff_absolute and diff == best_actual_difference:
                 best_matches.append(meta)
 
-        # RANDOM SELECTION: Pick randomly if multiple DMCs tied
+        # 5. RANDOM SELECTION: Pick randomly if multiple DMCs tied
         best_match_metadata = random.choice(best_matches)
 
-        # Extract and parse the raw stringified JSON back into dictionaries
+        # 6. Extract and parse the raw stringified JSON back into dictionaries
         index_key = best_match_metadata.get("index_key", "0")
         hotels_data = json.loads(best_match_metadata.get("raw_hotels", "{}"))
         attractions_data = json.loads(best_match_metadata.get("raw_attractions", "{}"))
         restaurants_data = json.loads(best_match_metadata.get("raw_restaurants", "{}"))
-        transfers_data = json.loads(best_match_metadata.get("raw_services", "{}")) 
-        guides_data = json.loads(best_match_metadata.get("raw_activities", "[]"))
-        
-        # ---> NEW: Unpack the massive global lists and the day's specific cities <---
-        day_cities_data = json.loads(best_match_metadata.get("raw_cities", "{}"))
-        all_services_data = json.loads(best_match_metadata.get("raw_all_services", "{}"))
-        all_transport_data = json.loads(best_match_metadata.get("raw_all_transport", "{}"))
+        activities_data = json.loads(best_match_metadata.get("raw_activities", "{}"))
+        services_data = json.loads(best_match_metadata.get("raw_services", "{}")) # NEW: Unpack services
 
         display_country = target_country.upper() if len(target_country) <= 3 else target_country.title()
+        display_city = target_city.title()
 
-        # Construct the EXACT requested output structure
+        # 7. Construct the EXACT requested nested JSON output structure
         final_response_variable = {
-            "sender_email": sender_email,
-            "start_date": start_date,
             "Master_DMC_id": best_match_metadata.get("Master_DMC_id"),
-            "destinations": [
+            "sender_email": sender_email,
+            "start_date": start_date, 
+            "DMC_id": best_match_metadata.get("DMC_id"),
+            "country": display_country,
+            "cities": [
                 {
-                    "DMC": [
+                    "city": display_city,
+                    "packages": [
                         {
-                            "DMC_id": best_match_metadata.get("DMC_id"),
-                            "country": display_country,
-                            "list_all_services": all_services_data,  # Now injected!
-                            "list_all_transport": all_transport_data, # Now injected!
-                            "packages": [
-                                {
-                                    "days": {
-                                        str(index_key): {
-                                            "day": best_match_metadata.get("max_days"),
-                                            "diff": best_actual_difference,
-                                            "cities": day_cities_data, # Now injected!
-                                            "hotels": hotels_data,
-                                            "attractions": attractions_data,
-                                            "restaurants": restaurants_data,
-                                            "Transfer": transfers_data,
-                                            "Guide": guides_data
-                                        }
-                                    }
+                            "days": {
+                                str(index_key): {
+                                    "day": best_match_metadata.get("max_days"),
+                                    "diff": best_actual_difference,
+                                    "hotels": hotels_data,
+                                    "attractions": attractions_data,
+                                    "restaurants": restaurants_data,
+                                    "activities": activities_data,
+                                    "services": services_data # NEW: Inject into final output
                                 }
-                            ]
+                            }
                         }
                     ]
                 }
@@ -147,7 +125,7 @@ def find_best_package(email_json_path):
         print("MATCH FOUND! Stored Variable Data:")
         print(json.dumps(final_response_variable, indent=4))
 
-        # send_data(final_response_variable)  # POST to API
+        send_data(final_response_variable)  # POST to API
         
         return final_response_variable
 

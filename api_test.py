@@ -2,6 +2,7 @@ import requests
 
 def send_data():
     url = "http://192.168.0.48:8080/api/v1/external/receive"
+    #"http://192.168.0.48:8080/api/v1/python/send"          #"http://192.168.0.48:8080/api/v1/external/receive"
 
     payload = {
         "response": "Sahil"

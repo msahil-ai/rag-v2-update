@@ -1,5 +1,9 @@
-import json
 import os
+import json
+
+# 1. THIS MUST BE BEFORE CHROMADB IS IMPORTED! Shuts off the telemetry warnings.
+os.environ["ANONYMIZED_TELEMETRY"] = "False"
+
 import chromadb
 import shutil
 from chromadb.utils import embedding_functions
@@ -25,78 +29,141 @@ collection = client.create_collection(name=collection_name, embedding_function=e
 def build_vector_db_from_api():
     print("Fetching live data from API...")
     
-    # 2. Grab the live JSON data directly from memory
     data = fetch_data()
     
     if not data:
         print("Failed to retrieve data from API.")
         return
 
+    # ---> NEW: DEBUG PRINT <---
+    # This will tell us EXACTLY what the API is handing over
+    print("\n--- DEBUG: API Data Structure ---")
+    if isinstance(data, dict):
+        print(f"Format: Dictionary")
+        print(f"Keys found: {list(data.keys())}")
+    elif isinstance(data, list):
+        print(f"Format: List")
+        print(f"Total items in list: {len(data)}")
+    else:
+        print(f"Format: {type(data)}")
+    print("---------------------------------\n")
+
+    if isinstance(data, dict):
+        master_list = data.get("Master_DMC", [])
+    elif isinstance(data, list):
+        master_list = data
+    else:
+        print("Error: API returned an unexpected data format.")
+        return
+    
+    #---------------------------------------------------------------------------------------------
+
+    # This will dig through as many 'data' wrappers as the API uses until it finds 'Master_DMC'
+    master_list = []
+    current_data = data
+    
+    # Try to drill down safely up to 5 layers deep
+    for _ in range(5): 
+        if isinstance(current_data, dict):
+            if "Master_DMC" in current_data:
+                master_list = current_data.get("Master_DMC", [])
+                print("Found 'Master_DMC' successfully!")
+                break
+            elif "data" in current_data:
+                print("... Drilling deeper into another 'data' wrapper ...")
+                current_data = current_data["data"]
+            else:
+                break
+        elif isinstance(current_data, list):
+            # If the API eventually hands us the raw list
+            master_list = current_data
+            print("Found raw list successfully!")
+            break
+
+    if not master_list:
+        print("Error: Could not find 'Master_DMC' anywhere in the API response.")
+        return
+
+
+    #----------------------------------------------------------------------------------------------
+
     documents = []
     metadatas = []
     ids = []
 
-    # 3. Flatten the structure
-    for master in data.get("Master_DMC", []):
+    # Flatten the structure
+    for master in master_list:
         master_dmc_id = master.get("Master_DMC_id") 
         
         for destination in master.get("destinations", []):
-            dmc_id = destination.get("DMC_id")
-            country = destination.get("country", "").strip().lower()
+            
+            for dmc_node in destination.get("DMC", []):
+                dmc_id = dmc_node.get("DMC_id")
+                country = dmc_node.get("country", "").strip().lower()
 
-            for city_node in destination.get("cities", []):
-                city = city_node.get("city", "").strip().lower()
+                list_all_services = dmc_node.get("list_all_services", {})
+                list_all_transport = dmc_node.get("list_all_transport", {})
 
-                for pkg_idx, pkg in enumerate(city_node.get("packages", [])):
+                for pkg_idx, pkg in enumerate(dmc_node.get("packages", [])):
                     days_dict = pkg.get("days", {})
                     
                     for index_key, day_data in days_dict.items():
                         max_days = int(day_data.get("day", 1))
 
-                        # 4. Read all the raw nested dictionaries, including the new 'services'
+                        day_cities = day_data.get("cities", {})
+                        primary_city = ""
+                        if isinstance(day_cities, dict) and "0" in day_cities:
+                            primary_city = day_cities["0"].get("city", "").strip().lower()
+
                         hotels_dict = day_data.get("hotels", {})
                         attractions_dict = day_data.get("attractions", {})
                         restaurants_dict = day_data.get("restaurants", {})
-                        activities_dict = day_data.get("activities", {})
-                        services_dict = day_data.get("services", {}) # NEW: Grab services
+                        
+                        transfers_dict = day_data.get("Transfer", {}) 
+                        guides_dict = day_data.get("Guide", [])
 
-                        # Extract names for the text document
-                        hotel_names = [h.get("hotel_name", "") for h in hotels_dict.values()]
-                        attraction_names = [a.get("name", "") for a in attractions_dict.values()]
+                        hotel_names = [h.get("hotel_name", "") for h in hotels_dict.values() if isinstance(h, dict)]
+                        attraction_names = [a.get("name", "") for a in attractions_dict.values() if isinstance(a, dict)]
                         
                         hotels_text = ", ".join(hotel_names) if hotel_names else "None specified"
                         attractions_text = ", ".join(attraction_names) if attraction_names else "None specified"
 
-                        # 5. Build the Semantic Document
                         document = (
-                            f"Premium travel package to {city.title()}, {country.title()} for day {max_days}. "
+                            f"Premium travel package to {primary_city.title()}, {country.title()} for day {max_days}. "
                             f"Accommodation options include: {hotels_text}. "
                             f"Key attractions available: {attractions_text}."
                         )
 
-                        # 6. Build the Metadata
                         metadata = {
                             "Master_DMC_id": master_dmc_id,
                             "DMC_id": dmc_id,
                             "country": country,
-                            "city": city,
+                            "city": primary_city, 
                             "max_days": max_days,
                             "index_key": index_key,
                             "raw_hotels": json.dumps(hotels_dict),
                             "raw_attractions": json.dumps(attractions_dict),
                             "raw_restaurants": json.dumps(restaurants_dict),
-                            "raw_activities": json.dumps(activities_dict),
-                            "raw_services": json.dumps(services_dict) # NEW: Store stringified services
+                            "raw_services": json.dumps(transfers_dict), 
+                            "raw_activities": json.dumps(guides_dict),  
+                            "raw_cities": json.dumps(day_cities),               
+                            "raw_all_services": json.dumps(list_all_services),  
+                            "raw_all_transport": json.dumps(list_all_transport) 
                         }
 
-                        doc_id = f"dmc_{dmc_id}_{city}_{max_days}_{pkg_idx}_{index_key}"
+                        doc_id = f"dmc_{dmc_id}_{primary_city}_{max_days}_{pkg_idx}_{index_key}"
 
                         documents.append(document)
                         metadatas.append(metadata)
                         ids.append(doc_id)
 
-    # 7. Push to Vector DB
-    print(f" Embedding {len(documents)} master packages into Vector DB...")
+    # 2. THE SAFETY NET: Check for 0 documents BEFORE saving to ChromaDB
+    if len(documents) == 0:
+        print("Warning: 0 packages were found in the API data.")
+        print("Please check the Debug output above to see if the JSON structure changed!")
+        return
+
+    print(f" Embedding {len(documents)} daily legs into Vector DB...")
     collection.add(
         documents=documents,
         metadatas=metadatas,
@@ -105,5 +172,4 @@ def build_vector_db_from_api():
     print(" Embeddings successfully stored!")
 
 if __name__ == "__main__":
-    # Call the new API function instead of a local file
     build_vector_db_from_api()
