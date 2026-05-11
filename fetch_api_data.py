@@ -1,7 +1,7 @@
 import requests
 
 def fetch_data():
-    url = "http://192.168.0.48:8080/api/v1/external/received"
+    url = "http://192.168.0.48:8080/api/v1/day-level/combined-json"
     # url = "http://192.168.0.48:8080/api/v1/day-level/combined-json"
 
     try:

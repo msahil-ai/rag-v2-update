@@ -3,151 +3,144 @@ import os
 import random
 import chromadb
 from chromadb.utils import embedding_functions
-from post_response_to_api import send_data
-from datetime import date 
+from datetime import date
 
-# Turn off ChromaDB telemetry here too
+# Turn off ChromaDB telemetry
 os.environ["ANONYMIZED_TELEMETRY"] = "False"
 
-# 1. Module-Level Initialization 
+# Initialize ChromaDB
 client = chromadb.PersistentClient(path="./chroma_db")
 embed_fn = embedding_functions.SentenceTransformerEmbeddingFunction(model_name="all-MiniLM-L6-v2")
 collection = client.get_collection(name="travel_packages_json", embedding_function=embed_fn)
 
+def get_next_month_first_day():
+    today = date.today()
+    if today.month == 12:
+        return date(today.year + 1, 1, 1).strftime("%Y-%m-%d")
+    return date(today.year, today.month + 1, 1).strftime("%Y-%m-%d")
+
 def find_best_package(email_json_path):
-    """Reads the extracted JSON and queries the Vector DB for the best package."""
-    
     with open(email_json_path, 'r', encoding='utf-8') as f:
         request = json.load(f)
 
-    # Safely get the sender email
-    sender_email = request.get("sender_email", "unknown@email.com")
-
-    # Start Date Logic with "1st of Next Month" Fallback
-    start_date = request.get("start_date")
+    # 1. Core Variables & Fallbacks
+    sender_email = request.get("sender_email", "").strip().lower()
+    start_date = request.get("start_date") or get_next_month_first_day()
     
-    if not start_date:
-        today = date.today()
-        
-        if today.month == 12:
-            next_month = 1
-            next_year = today.year + 1
-        else:
-            next_month = today.month + 1
-            next_year = today.year
-            
-        first_of_next_month = date(next_year, next_month, 1)
-        start_date = first_of_next_month.strftime("%Y-%m-%d")
-
     target_country = (request.get("destination_country") or "").strip().lower()
     target_city = (request.get("destination_city") or "").strip().lower()
-    requested_days = request.get("duration_days") 
     
-    if not requested_days:
-        requested_days = 3  
-    else:
-        requested_days = int(requested_days)
+    requested_days = request.get("duration_days")
+    requested_days = int(requested_days) if requested_days else 3
 
-    if not target_country or not target_city:
-        print("Missing country or city in the extracted email. Skipping.")
+    if not target_country or not sender_email:
+        print("Missing country or sender_email in the extracted email. Skipping.")
         return None
 
-    print(f"Searching Vector DB for: {target_city.title()}, {target_country.title()} for ~{requested_days} days...")
+    print(f"Searching DB for DMC: {sender_email} | {target_country.title()} for {requested_days} days...")
 
-    # Strict Pre-Filtering (Country -> City ONLY)
-    strict_filters = {
-        "$and": [
-            {"country": {"$eq": target_country}}, 
-            {"city": {"$eq": target_city}}
-        ]
-    }
+    # 2. Strict B2B Multi-Tenant Filtering (REMOVED INVALID $contains)
+    # MUST match DMC_email, Country, and Total Days
+    filter_conditions = [
+        {"DMC_email": {"$eq": sender_email}},
+        {"country": {"$eq": target_country}},
+        {"total_days": {"$eq": requested_days}}
+    ]
+
+    strict_filters = {"$and": filter_conditions}
 
     try:
+        # Search the database - we pull top 5 so we can filter the city in Python!
         results = collection.query(
-            query_texts=[f"A premium trip to {target_city}, {target_country}"],
-            n_results=15, 
+            query_texts=[f"Premium {requested_days}-day travel package to {target_city}, {target_country}"],
+            n_results=5, 
             where=strict_filters
         )
         
         if not results['metadatas'] or not results['metadatas'][0]:
-            print("No matches found for that location.")
+            print(f"No packages found for {sender_email} matching those exact criteria.")
             return None
 
-        # Find the closest match and gather ties for Random Selection
-        best_matches = []
-        min_diff_absolute = float('inf')
-        best_actual_difference = 0
-
+        # ---> THE FIX: Python Post-Filtering for City <---
+        best_match = None
         for meta in results['metadatas'][0]:
-            pkg_days = meta.get("max_days")
-            diff = pkg_days - requested_days
-            abs_diff = abs(diff)
+            if target_city:
+                # If they asked for a city, ensure it's in this package's city string
+                if target_city in meta.get("cities_included", ""):
+                    best_match = meta
+                    break
+            else:
+                # If they didn't ask for a specific city, the top result is fine
+                best_match = meta
+                break
 
-            if abs_diff < min_diff_absolute or (abs_diff == min_diff_absolute and diff > best_actual_difference):
-                min_diff_absolute = abs_diff
-                best_actual_difference = diff
-                best_matches = [meta] 
-            
-            elif abs_diff == min_diff_absolute and diff == best_actual_difference:
-                best_matches.append(meta)
+        if not best_match:
+            print(f"Found packages for DMC, but none included the specific city: {target_city.title()}")
+            return None
+        # --------------------------------------------------
 
-        # RANDOM SELECTION: Pick randomly if multiple DMCs tied
-        best_match_metadata = random.choice(best_matches)
-
-        # Extract and parse the raw stringified JSON back into dictionaries
-        index_key = best_match_metadata.get("index_key", "0")
-        hotels_data = json.loads(best_match_metadata.get("raw_hotels", "{}"))
-        attractions_data = json.loads(best_match_metadata.get("raw_attractions", "{}"))
-        restaurants_data = json.loads(best_match_metadata.get("raw_restaurants", "{}"))
-        transfers_data = json.loads(best_match_metadata.get("raw_services", "{}")) 
-        guides_data = json.loads(best_match_metadata.get("raw_activities", "[]"))
+        # 3. Extract the Winning Package & Global Lists
+        raw_package = json.loads(best_match.get("raw_package", "{}"))
+        all_services = json.loads(best_match.get("raw_all_services", "{}"))
         
-        # ---> NEW: Unpack the massive global lists and the day's specific cities <---
-        day_cities_data = json.loads(best_match_metadata.get("raw_cities", "{}"))
-        all_services_data = json.loads(best_match_metadata.get("raw_all_services", "{}"))
-        all_transport_data = json.loads(best_match_metadata.get("raw_all_transport", "{}"))
+        print(f"Found Package ID: {best_match.get('package_id')}!")
 
-        display_country = target_country.upper() if len(target_country) <= 3 else target_country.title()
+        # 4. THE SMART SWAPPER LOGIC
+        requested_star_rating = request.get("preferred_hotel_star") 
+        
+        if requested_star_rating:
+            print(f"Checking for {requested_star_rating}-star hotel upgrades...")
+            global_hotels = all_services.get("hotels", {})
+            
+            # Loop through the days in the package
+            days_dict = raw_package.get("days", {})
+            for day_key, day_data in days_dict.items():
+                current_hotels = day_data.get("hotels", {})
+                
+                # Check if current hotel matches requested stars
+                needs_swap = True
+                for h_key, h_val in current_hotels.items():
+                    if str(h_val.get("hotel_star_rating")) == str(requested_star_rating):
+                        needs_swap = False
+                        break
+                
+                if needs_swap:
+                    # Find a replacement from the global list
+                    replacement_found = False
+                    for glob_h_key, glob_h_val in global_hotels.items():
+                        if str(glob_h_val.get("hotel_star_rating")) == str(requested_star_rating):
+                            day_data["hotels"] = {glob_h_key: glob_h_val}
+                            print(f"  -> Swapped Day {day_data.get('day')} hotel to {glob_h_val.get('hotel_name')} ({requested_star_rating}-star)")
+                            replacement_found = True
+                            break
+                    
+                    # Random Fallback
+                    if not replacement_found and global_hotels:
+                        random_hotel_key = random.choice(list(global_hotels.keys()))
+                        day_data["hotels"] = {random_hotel_key: global_hotels[random_hotel_key]}
+                        print(f"  -> Requested stars not found. Randomly swapped to {global_hotels[random_hotel_key].get('hotel_name')}")
 
-        # Construct the EXACT requested output structure
+        # 5. Build the Final Output
         final_response_variable = {
             "sender_email": sender_email,
             "start_date": start_date,
-            "Master_DMC_id": best_match_metadata.get("Master_DMC_id"),
+            "Master_DMC_id": best_match.get("Master_DMC_id"),
             "destinations": [
                 {
                     "DMC": [
                         {
-                            "DMC_id": best_match_metadata.get("DMC_id"),
-                            "country": display_country,
-                            "list_all_services": all_services_data,  # Now injected!
-                            "list_all_transport": all_transport_data, # Now injected!
-                            "packages": [
-                                {
-                                    "days": {
-                                        str(index_key): {
-                                            "day": best_match_metadata.get("max_days"),
-                                            "diff": best_actual_difference,
-                                            "cities": day_cities_data, # Now injected!
-                                            "hotels": hotels_data,
-                                            "attractions": attractions_data,
-                                            "restaurants": restaurants_data,
-                                            "Transfer": transfers_data,
-                                            "Guide": guides_data
-                                        }
-                                    }
-                                }
-                            ]
+                            "DMC_id": best_match.get("DMC_id"),
+                            "DMC_email": best_match.get("DMC_email"),
+                            "country": best_match.get("country").title(),
+                            "packages": [raw_package] 
                         }
                     ]
                 }
             ]
         }
 
-        print("MATCH FOUND! Stored Variable Data:")
+        print("\nFINAL PACKAGE READY!")
         print(json.dumps(final_response_variable, indent=4))
-
-        # send_data(final_response_variable)  # POST to API
         
         return final_response_variable
 
@@ -166,5 +159,4 @@ if __name__ == "__main__":
                 print("\n" + "="*50)
                 print(f"Processing File: {filename}")
                 filepath = os.path.join(OUTPUT_DIR, filename)
-                
                 matched_package = find_best_package(filepath)

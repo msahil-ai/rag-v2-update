@@ -1,0 +1,1342 @@
+{
+  "success": true,
+  "filters": {
+    "master_dmc_id": null,
+    "dmc_id": null
+  },
+  "total_rows": 1,
+  "json_file_url": "http://192.168.0.48:8080/day-level-combined.json",
+  "data": {
+    "Master_DMC": [
+      {
+        "Master_DMC_id": 16,
+        "destinations": [
+          {
+            "DMC": [
+              {
+                "DMC_id": 18,
+                "DMC_email": "ika@millenium-tours.com",
+                "country": "Indonesia",
+                "list_all_services": {
+                  "hotels": {
+                    "Hotel 1": {
+                      "hotel_id": 305,
+                      "hotel_name": "Aglow Hotel",
+                      "city": "Batam",
+                      "country": "Indonesia",
+                      "hotel_star_rating": "3",
+                      "is_active": 1,
+                      "dmc_id": [17, 18],
+                      "meal_type": "Breakfast",
+                      "meal_types": [
+                        "Breakfast"
+                      ],
+                      "dish": "Buffet, Set Menu",
+                      "dishes": [
+                        "Buffet",
+                        "Set Menu"
+                      ]
+                    },
+                    "Hotel 2": {
+                      "hotel_id": 292,
+                      "hotel_name": "AP Premier Hotel",
+                      "city": "Batam",
+                      "country": "Indonesia",
+                      "hotel_star_rating": "3",
+                      "is_active": 1,
+                      "dmc_id": [17, 18],
+                      "meal_type": "Breakfast",
+                      "meal_types": [
+                        "Breakfast"
+                      ],
+                      "dish": "Buffet",
+                      "dishes": [
+                        "Buffet"
+                      ]
+                    },
+                    "Hotel 3": {
+                      "hotel_id": 300,
+                      "hotel_name": "Asialink Hotel",
+                      "city": "Batam",
+                      "country": "Indonesia",
+                      "hotel_star_rating": "4",
+                      "is_active": 1,
+                      "dmc_id": [17, 18],
+                      "meal_type": "Breakfast",
+                      "meal_types": [
+                        "Breakfast"
+                      ],
+                      "dish": "Buffet",
+                      "dishes": [
+                        "Buffet"
+                      ]
+                    },
+                    "Hotel 4": {
+                      "hotel_id": 78,
+                      "hotel_name": "Aston Batam Hotel & Residence",
+                      "city": "Batam",
+                      "country": "Indonesia",
+                      "hotel_star_rating": "5",
+                      "is_active": 1,
+                      "dmc_id": [34, 18],
+                      "meal_type": "Breakfast",
+                      "meal_types": [
+                        "Breakfast"
+                      ],
+                      "dish": "Buffet",
+                      "dishes": [
+                        "Buffet"
+                      ]
+                    },
+                    "Hotel 5": {
+                      "hotel_id": 289,
+                      "hotel_name": "Aston City Hotel",
+                      "city": "Batam",
+                      "country": "Indonesia",
+                      "hotel_star_rating": "4",
+                      "is_active": 1,
+                      "dmc_id": [17, 18],
+                      "meal_type": "Breakfast",
+                      "meal_types": [
+                        "Breakfast"
+                      ],
+                      "dish": "Buffet",
+                      "dishes": [
+                        "Buffet"
+                      ]
+                    },
+                    "Hotel 6": {
+                      "hotel_id": 291,
+                      "hotel_name": "Batam View Beach Resort",
+                      "city": "Batam",
+                      "country": "Indonesia",
+                      "hotel_star_rating": "4",
+                      "is_active": 1,
+                      "dmc_id": [17, 18],
+                      "meal_type": "Breakfast",
+                      "meal_types": [
+                        "Breakfast"
+                      ],
+                      "dish": "Set Menu, Buffet",
+                      "dishes": [
+                        "Set Menu",
+                        "Buffet"
+                      ]
+                    },
+                    "Hotel 7": {
+                      "hotel_id": 296,
+                      "hotel_name": "Beverly Hotel",
+                      "city": "Jakarta",
+                      "country": "Indonesia",
+                      "hotel_star_rating": "4",
+                      "is_active": 1,
+                      "dmc_id": [17, 18],
+                      "meal_type": "Breakfast",
+                      "meal_types": [
+                        "Breakfast"
+                      ],
+                      "dish": "Set Menu, Buffet",
+                      "dishes": [
+                        "Set Menu",
+                        "Buffet"
+                      ]
+                    },
+                    "Hotel 8": {
+                      "hotel_id": 290,
+                      "hotel_name": "Fave Hotel",
+                      "city": "Batam",
+                      "country": "Indonesia",
+                      "hotel_star_rating": "2",
+                      "is_active": 1,
+                      "dmc_id": [18],
+                      "meal_type": "Breakfast",
+                      "meal_types": [
+                        "Breakfast"
+                      ],
+                      "dish": "Set Menu",
+                      "dishes": [
+                        "Set Menu"
+                      ]
+                    },
+                    "Hotel 9": {
+                      "hotel_id": 293,
+                      "hotel_name": "Harmoni One Convention Hotel",
+                      "city": "Batam",
+                      "country": "Indonesia",
+                      "hotel_star_rating": "4",
+                      "is_active": 1,
+                      "dmc_id": [18],
+                      "meal_type": "",
+                      "meal_types": [],
+                      "dish": "",
+                      "dishes": []
+                    },
+                    "Hotel 10": {
+                      "hotel_id": 299,
+                      "hotel_name": "Harmoni Suites",
+                      "city": "Batam",
+                      "country": "Indonesia",
+                      "hotel_star_rating": "4",
+                      "is_active": 1,
+                      "dmc_id": [17, 18],
+                      "meal_type": "Breakfast",
+                      "meal_types": [
+                        "Breakfast"
+                      ],
+                      "dish": "Buffet",
+                      "dishes": [
+                        "Buffet"
+                      ]
+                    },
+                    "Hotel 11": {
+                      "hotel_id": 304,
+                      "hotel_name": "Harper Premier Nagoya",
+                      "city": "Batam",
+                      "country": "Indonesia",
+                      "hotel_star_rating": "4",
+                      "is_active": 1,
+                      "dmc_id": [17, 18],
+                      "meal_type": "Breakfast",
+                      "meal_types": [
+                        "Breakfast"
+                      ],
+                      "dish": "Buffet",
+                      "dishes": [
+                        "Buffet"
+                      ]
+                    },
+                    "Hotel 12": {
+                      "hotel_id": 314,
+                      "hotel_name": "Harper Premier Nagoya (Bandung Test)",
+                      "city": "Bandung",
+                      "country": "Indonesia",
+                      "hotel_star_rating": "4",
+                      "is_active": 1,
+                      "dmc_id": [17, 18],
+                      "meal_type": "",
+                      "meal_types": [],
+                      "dish": "",
+                      "dishes": []
+                    },
+                    "Hotel 13": {
+                      "hotel_id": 77,
+                      "hotel_name": "HARRIS Hotel Batam Center",
+                      "city": "Batam",
+                      "country": "Indonesia",
+                      "hotel_star_rating": "4",
+                      "is_active": 1,
+                      "dmc_id": [34, 18],
+                      "meal_type": "Breakfast",
+                      "meal_types": [
+                        "Breakfast"
+                      ],
+                      "dish": "Buffet",
+                      "dishes": [
+                        "Buffet"
+                      ]
+                    },
+                    "Hotel 14": {
+                      "hotel_id": 297,
+                      "hotel_name": "I Hotel",
+                      "city": "Batam",
+                      "country": "Indonesia",
+                      "hotel_star_rating": "4",
+                      "is_active": 1,
+                      "dmc_id": [17, 18],
+                      "meal_type": "Breakfast",
+                      "meal_types": [
+                        "Breakfast"
+                      ],
+                      "dish": "Buffet",
+                      "dishes": [
+                        "Buffet"
+                      ]
+                    },
+                    "Hotel 15": {
+                      "hotel_id": 295,
+                      "hotel_name": "Max One",
+                      "city": "Batam",
+                      "country": "Indonesia",
+                      "hotel_star_rating": "3",
+                      "is_active": 1,
+                      "dmc_id": [17, 18],
+                      "meal_type": "Breakfast",
+                      "meal_types": [
+                        "Breakfast"
+                      ],
+                      "dish": "Buffet",
+                      "dishes": [
+                        "Buffet"
+                      ]
+                    },
+                    "Hotel 16": {
+                      "hotel_id": 307,
+                      "hotel_name": "Montigo Resort",
+                      "city": "Batam",
+                      "country": "Indonesia",
+                      "hotel_star_rating": "5",
+                      "is_active": 1,
+                      "dmc_id": [17, 18],
+                      "meal_type": "Breakfast, Lunch",
+                      "meal_types": [
+                        "Breakfast",
+                        "Lunch"
+                      ],
+                      "dish": "Buffet",
+                      "dishes": [
+                        "Buffet"
+                      ]
+                    },
+                    "Hotel 17": {
+                      "hotel_id": 301,
+                      "hotel_name": "Nongsa Resort",
+                      "city": "Batam",
+                      "country": "Indonesia",
+                      "hotel_star_rating": "4",
+                      "is_active": 1,
+                      "dmc_id": [18],
+                      "meal_type": "Breakfast",
+                      "meal_types": [
+                        "Breakfast"
+                      ],
+                      "dish": "",
+                      "dishes": []
+                    },
+                    "Hotel 18": {
+                      "hotel_id": 306,
+                      "hotel_name": "Pacific Palace Hotel",
+                      "city": "Batam",
+                      "country": "Indonesia",
+                      "hotel_star_rating": "4",
+                      "is_active": 1,
+                      "dmc_id": [18],
+                      "meal_type": "Breakfast",
+                      "meal_types": [
+                        "Breakfast"
+                      ],
+                      "dish": "",
+                      "dishes": []
+                    },
+                    "Hotel 19": {
+                      "hotel_id": 294,
+                      "hotel_name": "Taman Nongsa Indah Village",
+                      "city": "Batam",
+                      "country": "Indonesia",
+                      "hotel_star_rating": "3",
+                      "is_active": 1,
+                      "dmc_id": [18],
+                      "meal_type": "Breakfast",
+                      "meal_types": [
+                        "Breakfast"
+                      ],
+                      "dish": "",
+                      "dishes": []
+                    },
+                    "Hotel 20": {
+                      "hotel_id": 302,
+                      "hotel_name": "The BCC Hotel and Residence",
+                      "city": "Batam",
+                      "country": "Indonesia",
+                      "hotel_star_rating": "4",
+                      "is_active": 1,
+                      "dmc_id": [17, 18],
+                      "meal_type": "Breakfast",
+                      "meal_types": [
+                        "Breakfast"
+                      ],
+                      "dish": "Buffet, Set Menu",
+                      "dishes": [
+                        "Buffet",
+                        "Set Menu"
+                      ]
+                    },
+                    "Hotel 21": {
+                      "hotel_id": 298,
+                      "hotel_name": "Turi Beach Resort",
+                      "city": "Batam",
+                      "country": "Indonesia",
+                      "hotel_star_rating": "4",
+                      "is_active": 1,
+                      "dmc_id": [18],
+                      "meal_type": "Breakfast",
+                      "meal_types": [
+                        "Breakfast"
+                      ],
+                      "dish": "",
+                      "dishes": []
+                    },
+                    "Hotel 22": {
+                      "hotel_id": 303,
+                      "hotel_name": "Yello Hotel",
+                      "city": "Batam",
+                      "country": "Indonesia",
+                      "hotel_star_rating": "3",
+                      "is_active": 1,
+                      "dmc_id": [17, 18],
+                      "meal_type": "Breakfast",
+                      "meal_types": [
+                        "Breakfast"
+                      ],
+                      "dish": "Buffet",
+                      "dishes": [
+                        "Buffet"
+                      ]
+                    }
+                  },
+                  "attractions": {
+                    "Attraction 1": {
+                      "attraction_id": "38",
+                      "name": "1 Day Trip Nirup Island",
+                      "city": "Batam",
+                      "ticket_ids": [
+                        "10000067"
+                      ],
+                      "ticket_names": [
+                        "1 Day Trip Nirup Island"
+                      ],
+                      "ticket_id": "10000067",
+                      "ticket_name": "1 Day Trip Nirup Island"
+                    },
+                    "Attraction 2": {
+                      "attraction_id": "41",
+                      "name": "Batam Adventure Park",
+                      "city": "Batam",
+                      "ticket_ids": [
+                        "10000093",
+                        "10000092",
+                        "10000095",
+                        "10000094",
+                        "10000096"
+                      ],
+                      "ticket_names": [
+                        "ATV",
+                        "Go Kart",
+                        "Nature Hike",
+                        "Paint Ball & Archery",
+                        "Shooting Range (Air Soft Gun)"
+                      ],
+                      "ticket_id": "10000093,10000092,10000095,10000094,10000096",
+                      "ticket_name": "ATV, Go Kart, Nature Hike, Paint Ball & Archery, Shooting Range (Air Soft Gun)"
+                    },
+                    "Attraction 3": {
+                      "attraction_id": "40",
+                      "name": "Batam Zoo Paradise",
+                      "city": "Batam",
+                      "ticket_ids": [
+                        "10000091"
+                      ],
+                      "ticket_names": [
+                        "Batam Zoo Paradise"
+                      ],
+                      "ticket_id": "10000091",
+                      "ticket_name": "Batam Zoo Paradise"
+                    },
+                    "Attraction 4": {
+                      "attraction_id": "43",
+                      "name": "Galilia Sunset Cruise Dinner",
+                      "city": "Batam",
+                      "ticket_ids": [
+                        "10000071"
+                      ],
+                      "ticket_names": [
+                        "Galilia Sunset Cruise Dinner"
+                      ],
+                      "ticket_id": "10000071",
+                      "ticket_name": "Galilia Sunset Cruise Dinner"
+                    },
+                    "Attraction 5": {
+                      "attraction_id": "22",
+                      "name": "Golden City Go-Kart",
+                      "city": "Batam",
+                      "ticket_ids": [],
+                      "ticket_names": [],
+                      "ticket_id": "",
+                      "ticket_name": ""
+                    },
+                    "Attraction 6": {
+                      "attraction_id": "58",
+                      "name": "Golden City Go-Kart (Bandung Test)",
+                      "city": "Bandung",
+                      "ticket_ids": [
+                        "10000106"
+                      ],
+                      "ticket_names": [
+                        "Golden City Go-Kart (Bandung Test)"
+                      ],
+                      "ticket_id": "10000106",
+                      "ticket_name": "Golden City Go-Kart (Bandung Test)"
+                    },
+                    "Attraction 7": {
+                      "attraction_id": "36",
+                      "name": "Kepri Coral Daytrip",
+                      "city": "Batam",
+                      "ticket_ids": [
+                        "10000065"
+                      ],
+                      "ticket_names": [
+                        "Kepri Coral Daytrip"
+                      ],
+                      "ticket_id": "10000065",
+                      "ticket_name": "Kepri Coral Daytrip"
+                    },
+                    "Attraction 8": {
+                      "attraction_id": "21",
+                      "name": "Mega Wisata Ocarina Batam",
+                      "city": "Batam",
+                      "ticket_ids": [],
+                      "ticket_names": [],
+                      "ticket_id": "",
+                      "ticket_name": ""
+                    },
+                    "Attraction 9": {
+                      "attraction_id": "39",
+                      "name": "Panbil Nature Reserve",
+                      "city": "Batam",
+                      "ticket_ids": [
+                        "10000090",
+                        "10000068",
+                        "10000069"
+                      ],
+                      "ticket_names": [
+                        "Pandan Hiking",
+                        "Rotan Hiking",
+                        "Semar Hiking"
+                      ],
+                      "ticket_id": "10000090,10000068,10000069",
+                      "ticket_name": "Pandan Hiking, Rotan Hiking, Semar Hiking"
+                    },
+                    "Attraction 10": {
+                      "attraction_id": "37",
+                      "name": "Spa 1.5 hrs",
+                      "city": "Batam",
+                      "ticket_ids": [
+                        "10000066"
+                      ],
+                      "ticket_names": [
+                        "Spa 1.5 hrs"
+                      ],
+                      "ticket_id": "10000066",
+                      "ticket_name": "Spa 1.5 hrs"
+                    },
+                    "Attraction 11": {
+                      "attraction_id": "42",
+                      "name": "Turi Beach",
+                      "city": "Batam",
+                      "ticket_ids": [
+                        "10000073",
+                        "10000074",
+                        "10000075",
+                        "10000084",
+                        "10000085",
+                        "10000076",
+                        "10000077",
+                        "10000078",
+                        "10000072",
+                        "10000089",
+                        "10000087",
+                        "10000088",
+                        "10000079",
+                        "10000080",
+                        "10000081",
+                        "10000082",
+                        "10000086",
+                        "10000083"
+                      ],
+                      "ticket_names": [
+                        "ATV 15 Min",
+                        "ATV 30 Min",
+                        "ATV 60 Min",
+                        "Banana Boat 15 min",
+                        "Banana Boat 20 Min",
+                        "Jet-Ski 15 Min",
+                        "Jet-Ski 30 Min",
+                        "Jet-Ski 60 Min",
+                        "Parasailing",
+                        "River Cruise",
+                        "Snorkling",
+                        "Sunset Fishing",
+                        "Tennis Court Day time 1 hour",
+                        "Tennis Court Night time1 hour",
+                        "Wake Boarding / Water Skiing 15 min",
+                        "Wake Boarding / Water Skiing 30 min",
+                        "Wall Climbing",
+                        "Zip Line"
+                      ],
+                      "ticket_id": "10000073,10000074,10000075,10000084,10000085,10000076,10000077,10000078,10000072,10000089,10000087,10000088,10000079,10000080,10000081,10000082,10000086,10000083",
+                      "ticket_name": "ATV 15 Min, ATV 30 Min, ATV 60 Min, Banana Boat 15 min, Banana Boat 20 Min, Jet-Ski 15 Min, Jet-Ski 30 Min, Jet-Ski 60 Min, Parasailing, River Cruise, Snorkling, Sunset Fishing, Tennis Court Day time 1 hour, Tennis Court Night time1 hour, Wake Boarding / Water Skiing 15 min, Wake Boarding / Water Skiing 30 min, Wall Climbing, Zip Line"
+                    }
+                  },
+                  "restaurants": {
+                    "Restaurant 1": {
+                      "restaurant_id": "12",
+                      "name": "Bandung Test Restaurant",
+                      "city": "Bandung"
+                    }
+                  },
+                  "guides": {
+                    "Guide 1": {
+                      "guide_id": "1",
+                      "guide_name": "Guide11",
+                      "city": "Batam",
+                      "guide_cost": 40
+                    },
+                    "Guide 2": {
+                      "guide_id": "3",
+                      "guide_name": "Guide11 (Bandung Test)",
+                      "city": "Bandung",
+                      "guide_cost": 40
+                    },
+                    "Guide 3": {
+                      "guide_id": "",
+                      "guide_name": "",
+                      "guide_cost": 0
+                    }
+                  },
+                  "transfers": {
+                    "Transfer 1": {
+                      "type": "zone",
+                      "zone_id": "55",
+                      "zone_name": "Day Trip Tour - Bintan + Pinang",
+                      "zone_type": "Attraction",
+                      "city": "526",
+                      "description": "Day Trip Tour - Bintan + Pinang",
+                      "dmc_id": "18",
+                      "itinerary_day": 0
+                    },
+                    "Transfer 2": {
+                      "type": "zone",
+                      "zone_id": "56",
+                      "zone_name": "Daytrip Tour Bintan",
+                      "zone_type": "Attraction",
+                      "city": "526",
+                      "description": "Daytrip Tour Bintan&nbsp;",
+                      "dmc_id": "18",
+                      "itinerary_day": 0
+                    },
+                    "Transfer 3": {
+                      "type": "zone",
+                      "zone_id": "57",
+                      "zone_name": "Drop Off Lagoi + Pelabuhan Uban",
+                      "zone_type": "Attraction",
+                      "city": "526",
+                      "description": "Drop Off Lagoi + Pelabuhan Uban",
+                      "dmc_id": "18",
+                      "itinerary_day": 0
+                    },
+                    "Transfer 4": {
+                      "type": "zone",
+                      "zone_id": "58",
+                      "zone_name": "Drop Off Lagoi + Pelabuhan Tg Pinang",
+                      "zone_type": "Attraction",
+                      "city": "526",
+                      "description": "Drop Off Lagoi + Pelabuhan Tg Pinang",
+                      "dmc_id": "18",
+                      "itinerary_day": 0
+                    },
+                    "Transfer 5": {
+                      "type": "zone",
+                      "zone_id": "59",
+                      "zone_name": "Lagoi Zone",
+                      "zone_type": "Hotel",
+                      "city": "526",
+                      "description": "Lagoi Zone",
+                      "dmc_id": "18",
+                      "itinerary_day": 0
+                    },
+                    "Transfer 6": {
+                      "type": "zone",
+                      "zone_id": "60",
+                      "zone_name": "Lagoi Bay Zone",
+                      "zone_type": "Hotel",
+                      "city": "526",
+                      "description": "Lagoi Bay Zone",
+                      "dmc_id": "18",
+                      "itinerary_day": 0
+                    },
+                    "Transfer 7": {
+                      "type": "zone",
+                      "zone_id": "61",
+                      "zone_name": "Trikora Coast Zone",
+                      "zone_type": "Hotel",
+                      "city": "526",
+                      "description": "Trikora Coast (East Bintan – Local &amp; Rustic)",
+                      "dmc_id": "18",
+                      "itinerary_day": 0
+                    },
+                    "Transfer 8": {
+                      "type": "zone",
+                      "zone_id": "62",
+                      "zone_name": "Tanjung Pinang Zone",
+                      "zone_type": "Hotel",
+                      "city": "526",
+                      "description": "Tanjung Pinang (Main Town / City Area)",
+                      "dmc_id": "18",
+                      "itinerary_day": 0
+                    },
+                    "Transfer 9": {
+                      "type": "zone",
+                      "zone_id": "63",
+                      "zone_name": "Nirwana / North Coast Zone",
+                      "zone_type": "Hotel",
+                      "city": "526",
+                      "description": "Nirwana / North Coast (Near Lagoi but separate cluster)",
+                      "dmc_id": "18",
+                      "itinerary_day": 0
+                    },
+                    "Transfer 10": {
+                      "type": "zone",
+                      "zone_id": "64",
+                      "zone_name": "Bandung City Center Zone",
+                      "zone_type": "Hotel",
+                      "city": "258",
+                      "description": "Bandung city center hotels and malls",
+                      "dmc_id": "18",
+                      "itinerary_day": 0
+                    },
+                    "Transfer 11": {
+                      "type": "zone",
+                      "zone_id": "65",
+                      "zone_name": "Bandung North Zone",
+                      "zone_type": "Hotel",
+                      "city": "258",
+                      "description": "Bandung north hotel cluster and viewpoints",
+                      "dmc_id": "18",
+                      "itinerary_day": 0
+                    },
+                    "Transfer 12": {
+                      "type": "zone",
+                      "zone_id": "66",
+                      "zone_name": "Bandung Attraction Loop",
+                      "zone_type": "Attraction",
+                      "city": "258",
+                      "description": "Bandung attraction loop transfer route",
+                      "dmc_id": "18",
+                      "itinerary_day": 0
+                    },
+                    "Transfer 13": {
+                      "type": "zone",
+                      "zone_id": "67",
+                      "zone_name": "Bandung Station Drop Zone",
+                      "zone_type": "Attraction",
+                      "city": "258",
+                      "description": "Bandung station and city drop transfer zone",
+                      "dmc_id": "18",
+                      "itinerary_day": 0
+                    },
+                    "Transfer 14": {
+                      "type": "zone",
+                      "zone_id": "68",
+                      "zone_name": "Batam Center Zone",
+                      "zone_type": "Hotel",
+                      "city": "266",
+                      "description": "Batam center hotel transfer zone",
+                      "dmc_id": "18",
+                      "itinerary_day": 0
+                    },
+                    "Transfer 15": {
+                      "type": "zone",
+                      "zone_id": "69",
+                      "zone_name": "Nagoya Batam Zone",
+                      "zone_type": "Hotel",
+                      "city": "266",
+                      "description": "Nagoya Batam hotel and shopping zone",
+                      "dmc_id": "18",
+                      "itinerary_day": 0
+                    },
+                    "Transfer 16": {
+                      "type": "zone",
+                      "zone_id": "70",
+                      "zone_name": "Batam Attraction Circuit",
+                      "zone_type": "Attraction",
+                      "city": "266",
+                      "description": "Batam day attraction transfer circuit",
+                      "dmc_id": "18",
+                      "itinerary_day": 0
+                    },
+                    "Transfer 17": {
+                      "type": "zone",
+                      "zone_id": "71",
+                      "zone_name": "Batam Ferry Terminal Drop Zone",
+                      "zone_type": "Attraction",
+                      "city": "266",
+                      "description": "Batam ferry terminal pickup and drop zone",
+                      "dmc_id": "18",
+                      "itinerary_day": 0
+                    },
+                    "Transfer 18": {
+                      "type": "hotel_transfer",
+                      "city": "Bandung",
+                      "pickup_location": "port:45",
+                      "drop_location": "",
+                      "itinerary_day": 1
+                    },
+                    "Transfer 19": {
+                      "type": "hotel_transfer",
+                      "city": "Bandung",
+                      "pickup_location": "port:45",
+                      "drop_location": "hotel:314",
+                      "itinerary_day": 1
+                    },
+                    "Transfer 20": {
+                      "type": "attraction_transfer",
+                      "required": "Yes",
+                      "transfer_type": "Arrival",
+                      "city": "Bandung",
+                      "pickup_location": "port:45",
+                      "drop_location": "hotel:314",
+                      "itinerary_day": 1
+                    },
+                    "Transfer 21": {
+                      "type": "service_transfer",
+                      "required": "Yes",
+                      "city": "Bandung",
+                      "pickup_location": "port:45",
+                      "drop_location": "hotel:314",
+                      "vehicle_id": "",
+                      "vehicle_name": "",
+                      "cost": 0,
+                      "itinerary_day": 1
+                    },
+                    "Transfer 22": {
+                      "type": "hotel_transfer",
+                      "city": "Bandung",
+                      "pickup_location": "port:45",
+                      "drop_location": "",
+                      "itinerary_day": 2
+                    },
+                    "Transfer 23": {
+                      "type": "attraction_transfer",
+                      "required": "Yes",
+                      "transfer_type": "Transfer",
+                      "city": "Bandung",
+                      "pickup_location": "",
+                      "drop_location": "",
+                      "itinerary_day": 2
+                    },
+                    "Transfer 24": {
+                      "type": "hotel_transfer",
+                      "city": "Bandung",
+                      "pickup_location": "port:45",
+                      "drop_location": "hotel:314",
+                      "itinerary_day": 3
+                    },
+                    "Transfer 25": {
+                      "type": "hotel_transfer",
+                      "city": "Bandung",
+                      "pickup_location": "port:45",
+                      "drop_location": "hotel:314",
+                      "itinerary_day": 4
+                    },
+                    "Transfer 26": {
+                      "type": "",
+                      "itinerary_day": 0,
+                      "vehicle_id": "",
+                      "vehicle_service_type": "",
+                      "vehicle_passengers": 0,
+                      "cost": 0
+                    }
+                  }
+                },
+                "list_all_transport": {
+                  "zones": {
+                    "Transfer 1": {
+                      "type": "zone",
+                      "zone_id": "55",
+                      "zone_name": "Day Trip Tour - Bintan + Pinang",
+                      "zone_type": "Attraction",
+                      "city": "526",
+                      "description": "Day Trip Tour - Bintan + Pinang",
+                      "dmc_id": "18",
+                      "itinerary_day": 0
+                    },
+                    "Transfer 2": {
+                      "type": "zone",
+                      "zone_id": "56",
+                      "zone_name": "Daytrip Tour Bintan",
+                      "zone_type": "Attraction",
+                      "city": "526",
+                      "description": "Daytrip Tour Bintan&nbsp;",
+                      "dmc_id": "18",
+                      "itinerary_day": 0
+                    },
+                    "Transfer 3": {
+                      "type": "zone",
+                      "zone_id": "57",
+                      "zone_name": "Drop Off Lagoi + Pelabuhan Uban",
+                      "zone_type": "Attraction",
+                      "city": "526",
+                      "description": "Drop Off Lagoi + Pelabuhan Uban",
+                      "dmc_id": "18",
+                      "itinerary_day": 0
+                    },
+                    "Transfer 4": {
+                      "type": "zone",
+                      "zone_id": "58",
+                      "zone_name": "Drop Off Lagoi + Pelabuhan Tg Pinang",
+                      "zone_type": "Attraction",
+                      "city": "526",
+                      "description": "Drop Off Lagoi + Pelabuhan Tg Pinang",
+                      "dmc_id": "18",
+                      "itinerary_day": 0
+                    },
+                    "Transfer 5": {
+                      "type": "zone",
+                      "zone_id": "59",
+                      "zone_name": "Lagoi Zone",
+                      "zone_type": "Hotel",
+                      "city": "526",
+                      "description": "Lagoi Zone",
+                      "dmc_id": "18",
+                      "itinerary_day": 0
+                    },
+                    "Transfer 6": {
+                      "type": "zone",
+                      "zone_id": "60",
+                      "zone_name": "Lagoi Bay Zone",
+                      "zone_type": "Hotel",
+                      "city": "526",
+                      "description": "Lagoi Bay Zone",
+                      "dmc_id": "18",
+                      "itinerary_day": 0
+                    },
+                    "Transfer 7": {
+                      "type": "zone",
+                      "zone_id": "61",
+                      "zone_name": "Trikora Coast Zone",
+                      "zone_type": "Hotel",
+                      "city": "526",
+                      "description": "Trikora Coast (East Bintan – Local &amp; Rustic)",
+                      "dmc_id": "18",
+                      "itinerary_day": 0
+                    },
+                    "Transfer 8": {
+                      "type": "zone",
+                      "zone_id": "62",
+                      "zone_name": "Tanjung Pinang Zone",
+                      "zone_type": "Hotel",
+                      "city": "526",
+                      "description": "Tanjung Pinang (Main Town / City Area)",
+                      "dmc_id": "18",
+                      "itinerary_day": 0
+                    },
+                    "Transfer 9": {
+                      "type": "zone",
+                      "zone_id": "63",
+                      "zone_name": "Nirwana / North Coast Zone",
+                      "zone_type": "Hotel",
+                      "city": "526",
+                      "description": "Nirwana / North Coast (Near Lagoi but separate cluster)",
+                      "dmc_id": "18",
+                      "itinerary_day": 0
+                    },
+                    "Transfer 10": {
+                      "type": "zone",
+                      "zone_id": "64",
+                      "zone_name": "Bandung City Center Zone",
+                      "zone_type": "Hotel",
+                      "city": "258",
+                      "description": "Bandung city center hotels and malls",
+                      "dmc_id": "18",
+                      "itinerary_day": 0
+                    },
+                    "Transfer 11": {
+                      "type": "zone",
+                      "zone_id": "65",
+                      "zone_name": "Bandung North Zone",
+                      "zone_type": "Hotel",
+                      "city": "258",
+                      "description": "Bandung north hotel cluster and viewpoints",
+                      "dmc_id": "18",
+                      "itinerary_day": 0
+                    },
+                    "Transfer 12": {
+                      "type": "zone",
+                      "zone_id": "66",
+                      "zone_name": "Bandung Attraction Loop",
+                      "zone_type": "Attraction",
+                      "city": "258",
+                      "description": "Bandung attraction loop transfer route",
+                      "dmc_id": "18",
+                      "itinerary_day": 0
+                    },
+                    "Transfer 13": {
+                      "type": "zone",
+                      "zone_id": "67",
+                      "zone_name": "Bandung Station Drop Zone",
+                      "zone_type": "Attraction",
+                      "city": "258",
+                      "description": "Bandung station and city drop transfer zone",
+                      "dmc_id": "18",
+                      "itinerary_day": 0
+                    },
+                    "Transfer 14": {
+                      "type": "zone",
+                      "zone_id": "68",
+                      "zone_name": "Batam Center Zone",
+                      "zone_type": "Hotel",
+                      "city": "266",
+                      "description": "Batam center hotel transfer zone",
+                      "dmc_id": "18",
+                      "itinerary_day": 0
+                    },
+                    "Transfer 15": {
+                      "type": "zone",
+                      "zone_id": "69",
+                      "zone_name": "Nagoya Batam Zone",
+                      "zone_type": "Hotel",
+                      "city": "266",
+                      "description": "Nagoya Batam hotel and shopping zone",
+                      "dmc_id": "18",
+                      "itinerary_day": 0
+                    },
+                    "Transfer 16": {
+                      "type": "zone",
+                      "zone_id": "70",
+                      "zone_name": "Batam Attraction Circuit",
+                      "zone_type": "Attraction",
+                      "city": "266",
+                      "description": "Batam day attraction transfer circuit",
+                      "dmc_id": "18",
+                      "itinerary_day": 0
+                    },
+                    "Transfer 17": {
+                      "type": "zone",
+                      "zone_id": "71",
+                      "zone_name": "Batam Ferry Terminal Drop Zone",
+                      "zone_type": "Attraction",
+                      "city": "266",
+                      "description": "Batam ferry terminal pickup and drop zone",
+                      "dmc_id": "18",
+                      "itinerary_day": 0
+                    }
+                  },
+                  "itinerary_transfers": {
+                    "Transfer 1": {
+                      "type": "hotel_transfer",
+                      "city": "Bandung",
+                      "pickup_location": "port:45",
+                      "drop_location": "",
+                      "itinerary_day": 1
+                    },
+                    "Transfer 2": {
+                      "type": "hotel_transfer",
+                      "city": "Bandung",
+                      "pickup_location": "port:45",
+                      "drop_location": "hotel:314",
+                      "itinerary_day": 1
+                    },
+                    "Transfer 3": {
+                      "type": "attraction_transfer",
+                      "required": "Yes",
+                      "transfer_type": "Arrival",
+                      "city": "Bandung",
+                      "pickup_location": "port:45",
+                      "drop_location": "hotel:314",
+                      "itinerary_day": 1
+                    },
+                    "Transfer 4": {
+                      "type": "service_transfer",
+                      "required": "Yes",
+                      "city": "Bandung",
+                      "pickup_location": "port:45",
+                      "drop_location": "hotel:314",
+                      "vehicle_id": "",
+                      "vehicle_name": "",
+                      "cost": 0,
+                      "itinerary_day": 1
+                    },
+                    "Transfer 5": {
+                      "type": "hotel_transfer",
+                      "city": "Bandung",
+                      "pickup_location": "port:45",
+                      "drop_location": "",
+                      "itinerary_day": 2
+                    },
+                    "Transfer 6": {
+                      "type": "attraction_transfer",
+                      "required": "Yes",
+                      "transfer_type": "Transfer",
+                      "city": "Bandung",
+                      "pickup_location": "",
+                      "drop_location": "",
+                      "itinerary_day": 2
+                    },
+                    "Transfer 7": {
+                      "type": "hotel_transfer",
+                      "city": "Bandung",
+                      "pickup_location": "port:45",
+                      "drop_location": "hotel:314",
+                      "itinerary_day": 3
+                    },
+                    "Transfer 8": {
+                      "type": "hotel_transfer",
+                      "city": "Bandung",
+                      "pickup_location": "port:45",
+                      "drop_location": "hotel:314",
+                      "itinerary_day": 4
+                    }
+                  },
+                  "service_meta_transfers": {
+                    "Transfer 1": {
+                      "type": "",
+                      "itinerary_day": 0,
+                      "vehicle_id": "",
+                      "vehicle_service_type": "",
+                      "vehicle_passengers": 0,
+                      "cost": 0
+                    }
+                  }
+                },
+                "packages": [
+                  {
+                    "package_id": "pkg_1778129671118_8tm4ai",
+                    "total_days": 4,
+                    "days": {
+                      "0": {
+                        "day": 1,
+                        "hotels": {
+                          "Hotel 1": {
+                            "hotel_id": "314",
+                            "hotel_name": "Harper Premier Nagoya (Bandung Test) - Bandung",
+                            "city": "Bandung",
+                            "meal_plan": "room only",
+                            "price": 0,
+                            "night": 1,
+                            "meal_type": "",
+                            "guide_required": "Yes",
+                            "arrival_departure": "Yes",
+                            "arrival_departure_type": "private",
+                            "priority": 1,
+                            "transfer_city": "Bandung",
+                            "transfer_pickup": "port:45",
+                            "transfer_drop": ""
+                          },
+                          "Hotel 2": {
+                            "hotel_id": "300",
+                            "hotel_name": "Asialink Hotel - Batam",
+                            "city": "Batam",
+                            "meal_plan": "room with all meals (breakfast + lunch + dinner)",
+                            "price": 0,
+                            "night": 2,
+                            "meal_type": "Set Menu",
+                            "guide_required": "Yes",
+                            "arrival_departure": "No",
+                            "arrival_departure_type": "",
+                            "priority": 1,
+                            "transfer_city": "Bandung",
+                            "transfer_pickup": "port:45",
+                            "transfer_drop": "hotel:314"
+                          }
+                        },
+                        "attractions": {
+                          "Attraction 1": {
+                            "attraction_id": "58",
+                            "name": "Golden City Go-Kart (Bandung Test) - Bandung",
+                            "ticket_id": "10000106",
+                            "ticket_name": "Golden City Go-Kart (Bandung Test)",
+                            "city": "Bandung",
+                            "transfer": {
+                              "required": "Yes",
+                              "transfer_type": "Arrival",
+                              "city": "Bandung",
+                              "pickup_location": "port:45",
+                              "drop_location": "hotel:314",
+                              "additional_transfers": []
+                            }
+                          }
+                        },
+                        "restaurants": {
+                          "Restaurant 1": {
+                            "restaurant_id": "12",
+                            "name": "Bandung Test Restaurant - Bandung"
+                          }
+                        },
+                        "services": {
+                          "Service 1": {
+                            "service_type": "restaurant",
+                            "restaurant_id": "12",
+                            "restaurant_name": "Bandung Test Restaurant - Bandung",
+                            "city": "Bandung",
+                            "meal_configuration": {
+                              "meal_type": "",
+                              "dish": "A La Carte",
+                              "time_slot": ""
+                            },
+                            "transfer": {
+                              "required": "Yes",
+                              "city": "Bandung",
+                              "type": "",
+                              "way": "",
+                              "vehicle_id": "",
+                              "vehicle_name": "",
+                              "pickup_location_id": "",
+                              "pickup_location": "port:45",
+                              "drop_location": "hotel:314",
+                              "cost": 0,
+                              "pickup_time": ""
+                            }
+                          }
+                        },
+                        "cities": {
+                          "0": {
+                            "city": "Bandung",
+                            "city_checkin": "1",
+                            "city_checkout": "2"
+                          },
+                          "1": {
+                            "city": "Batam",
+                            "city_checkin": "2",
+                            "city_checkout": "4"
+                          }
+                        }
+                      },
+                      "1": {
+                        "day": 2,
+                        "hotels": {
+                          "Hotel 1": {
+                            "hotel_id": "314",
+                            "hotel_name": "Harper Premier Nagoya (Bandung Test) - Bandung",
+                            "city": "Bandung",
+                            "meal_plan": "room only",
+                            "price": 0,
+                            "night": 1,
+                            "meal_type": "",
+                            "guide_required": "Yes",
+                            "arrival_departure": "Yes",
+                            "arrival_departure_type": "private",
+                            "priority": 1,
+                            "transfer_city": "Bandung",
+                            "transfer_pickup": "port:45",
+                            "transfer_drop": ""
+                          }
+                        },
+                        "attractions": {
+                          "Attraction 1": {
+                            "attraction_id": "41",
+                            "name": "Batam Adventure Park - Batam",
+                            "ticket_id": "10000092",
+                            "ticket_name": "Go Kart",
+                            "city": "Batam",
+                            "transfer": {
+                              "required": "Yes",
+                              "transfer_type": "Transfer",
+                              "city": "Bandung",
+                              "pickup_location": "",
+                              "drop_location": "",
+                              "additional_transfers": []
+                            }
+                          },
+                          "Attraction 2": {
+                            "attraction_id": "43",
+                            "name": "Galilia Sunset Cruise Dinner - Batam",
+                            "ticket_id": "10000071",
+                            "ticket_name": "Galilia Sunset Cruise Dinner",
+                            "city": "Batam",
+                            "transfer": {
+                              "required": "Yes",
+                              "transfer_type": "Transfer",
+                              "city": "Bandung",
+                              "pickup_location": "",
+                              "drop_location": "",
+                              "additional_transfers": []
+                            }
+                          }
+                        },
+                        "restaurants": [],
+                        "services": [],
+                        "cities": {
+                          "0": {
+                            "city": "Bandung",
+                            "city_checkin": "1",
+                            "city_checkout": "2"
+                          },
+                          "1": {
+                            "city": "Batam",
+                            "city_checkin": "2",
+                            "city_checkout": "4"
+                          }
+                        }
+                      },
+                      "2": {
+                        "day": 3,
+                        "hotels": {
+                          "Hotel 1": {
+                            "hotel_id": "300",
+                            "hotel_name": "Asialink Hotel - Batam",
+                            "city": "Batam",
+                            "meal_plan": "room with all meals (breakfast + lunch + dinner)",
+                            "price": 0,
+                            "night": 2,
+                            "meal_type": "Set Menu",
+                            "guide_required": "Yes",
+                            "arrival_departure": "No",
+                            "arrival_departure_type": "",
+                            "priority": 1,
+                            "transfer_city": "Bandung",
+                            "transfer_pickup": "port:45",
+                            "transfer_drop": "hotel:314"
+                          }
+                        },
+                        "attractions": [],
+                        "restaurants": [],
+                        "services": [],
+                        "cities": {
+                          "0": {
+                            "city": "Bandung",
+                            "city_checkin": "1",
+                            "city_checkout": "2"
+                          },
+                          "1": {
+                            "city": "Batam",
+                            "city_checkin": "2",
+                            "city_checkout": "4"
+                          }
+                        }
+                      },
+                      "3": {
+                        "day": 4,
+                        "hotels": {
+                          "Hotel 1": {
+                            "hotel_id": "300",
+                            "hotel_name": "Asialink Hotel - Batam",
+                            "city": "Batam",
+                            "meal_plan": "room with all meals (breakfast + lunch + dinner)",
+                            "price": 0,
+                            "night": 2,
+                            "meal_type": "Set Menu",
+                            "guide_required": "Yes",
+                            "arrival_departure": "No",
+                            "arrival_departure_type": "",
+                            "priority": 1,
+                            "transfer_city": "Bandung",
+                            "transfer_pickup": "port:45",
+                            "transfer_drop": "hotel:314"
+                          }
+                        },
+                        "attractions": [],
+                        "restaurants": [],
+                        "services": [],
+                        "cities": {
+                          "0": {
+                            "city": "Bandung",
+                            "city_checkin": "1",
+                            "city_checkout": "2"
+                          },
+                          "1": {
+                            "city": "Batam",
+                            "city_checkin": "2",
+                            "city_checkout": "4"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

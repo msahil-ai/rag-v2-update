@@ -1,7 +1,7 @@
 import os
 import json
 
-# 1. THIS MUST BE BEFORE CHROMADB IS IMPORTED! Shuts off the telemetry warnings.
+# Shuts off the telemetry warnings.
 os.environ["ANONYMIZED_TELEMETRY"] = "False"
 
 import chromadb
@@ -35,135 +35,103 @@ def build_vector_db_from_api():
         print("Failed to retrieve data from API.")
         return
 
-    # ---> NEW: DEBUG PRINT <---
-    # This will tell us EXACTLY what the API is handing over
-    print("\n--- DEBUG: API Data Structure ---")
-    if isinstance(data, dict):
-        print(f"Format: Dictionary")
-        print(f"Keys found: {list(data.keys())}")
-    elif isinstance(data, list):
-        print(f"Format: List")
-        print(f"Total items in list: {len(data)}")
-    else:
-        print(f"Format: {type(data)}")
-    print("---------------------------------\n")
+    # Strip wrapper if it exists
+    if isinstance(data, dict) and "data" in data:
+        data = data["data"]
 
-    if isinstance(data, dict):
-        master_list = data.get("Master_DMC", [])
-    elif isinstance(data, list):
-        master_list = data
-    else:
-        print("Error: API returned an unexpected data format.")
-        return
-    
-    #---------------------------------------------------------------------------------------------
+    # THE RECURSIVE HUNTER
+    def hunt_for_master_dmc(node):
+        found_items = []
+        if isinstance(node, dict):
+            if "Master_DMC" in node:
+                val = node["Master_DMC"]
+                if isinstance(val, list):
+                    found_items.extend(val)
+                else:
+                    found_items.append(val)
+            for value in node.values():
+                found_items.extend(hunt_for_master_dmc(value))
+        elif isinstance(node, list):
+            for item in node:
+                found_items.extend(hunt_for_master_dmc(item))
+        elif isinstance(node, str):
+            if "Master_DMC" in node: 
+                try:
+                    parsed = json.loads(node)
+                    found_items.extend(hunt_for_master_dmc(parsed))
+                except Exception:
+                    pass
+        return found_items
 
-    # This will dig through as many 'data' wrappers as the API uses until it finds 'Master_DMC'
-    master_list = []
-    current_data = data
-    
-    # Try to drill down safely up to 5 layers deep
-    for _ in range(5): 
-        if isinstance(current_data, dict):
-            if "Master_DMC" in current_data:
-                master_list = current_data.get("Master_DMC", [])
-                print("Found 'Master_DMC' successfully!")
-                break
-            elif "data" in current_data:
-                print("... Drilling deeper into another 'data' wrapper ...")
-                current_data = current_data["data"]
-            else:
-                break
-        elif isinstance(current_data, list):
-            # If the API eventually hands us the raw list
-            master_list = current_data
-            print("Found raw list successfully!")
-            break
+    print("Hunting for Master_DMC packages...")
+    master_list = hunt_for_master_dmc(data)
 
     if not master_list:
         print("Error: Could not find 'Master_DMC' anywhere in the API response.")
         return
 
-
-    #----------------------------------------------------------------------------------------------
-
     documents = []
     metadatas = []
     ids = []
 
-    # Flatten the structure
+    # Flatten the NEW Package-Level structure
     for master in master_list:
         master_dmc_id = master.get("Master_DMC_id") 
         
         for destination in master.get("destinations", []):
-            
             for dmc_node in destination.get("DMC", []):
+                
                 dmc_id = dmc_node.get("DMC_id")
+                dmc_email = dmc_node.get("DMC_email", "").strip().lower() # NEW: Capture the DMC Email
                 country = dmc_node.get("country", "").strip().lower()
 
                 list_all_services = dmc_node.get("list_all_services", {})
                 list_all_transport = dmc_node.get("list_all_transport", {})
 
-                for pkg_idx, pkg in enumerate(dmc_node.get("packages", [])):
+                # ---> NEW: We now loop through and embed WHOLE PACKAGES, not just days <---
+                for pkg in dmc_node.get("packages", []):
+                    package_id = pkg.get("package_id")
+                    total_days = int(pkg.get("total_days", 3))
                     days_dict = pkg.get("days", {})
                     
-                    for index_key, day_data in days_dict.items():
-                        max_days = int(day_data.get("day", 1))
+                    # Extract all cities involved in this package for text search
+                    package_cities = set()
+                    for day_data in days_dict.values():
+                        cities_data = day_data.get("cities", {})
+                        for c_info in cities_data.values():
+                            if isinstance(c_info, dict) and c_info.get("city"):
+                                package_cities.add(c_info.get("city").strip().lower())
+                    
+                    cities_text = ", ".join(list(package_cities))
 
-                        day_cities = day_data.get("cities", {})
-                        primary_city = ""
-                        if isinstance(day_cities, dict) and "0" in day_cities:
-                            primary_city = day_cities["0"].get("city", "").strip().lower()
+                    # The document now represents the ENTIRE package
+                    document = f"Premium {total_days}-day travel package to {cities_text}, {country.title()}."
 
-                        hotels_dict = day_data.get("hotels", {})
-                        attractions_dict = day_data.get("attractions", {})
-                        restaurants_dict = day_data.get("restaurants", {})
-                        
-                        transfers_dict = day_data.get("Transfer", {}) 
-                        guides_dict = day_data.get("Guide", [])
+                    # Pack the ENTIRE package JSON into the metadata
+                    metadata = {
+                        "Master_DMC_id": master_dmc_id,
+                        "DMC_id": dmc_id,
+                        "DMC_email": dmc_email, # Critical for exact matching
+                        "country": country,
+                        "cities_included": cities_text, 
+                        "total_days": total_days,
+                        "package_id": package_id,
+                        "raw_package": json.dumps(pkg), # Store the whole package!
+                        "raw_all_services": json.dumps(list_all_services),  
+                        "raw_all_transport": json.dumps(list_all_transport) 
+                    }
 
-                        hotel_names = [h.get("hotel_name", "") for h in hotels_dict.values() if isinstance(h, dict)]
-                        attraction_names = [a.get("name", "") for a in attractions_dict.values() if isinstance(a, dict)]
-                        
-                        hotels_text = ", ".join(hotel_names) if hotel_names else "None specified"
-                        attractions_text = ", ".join(attraction_names) if attraction_names else "None specified"
+                    doc_id = f"pkg_{dmc_id}_{package_id}"
 
-                        document = (
-                            f"Premium travel package to {primary_city.title()}, {country.title()} for day {max_days}. "
-                            f"Accommodation options include: {hotels_text}. "
-                            f"Key attractions available: {attractions_text}."
-                        )
+                    documents.append(document)
+                    metadatas.append(metadata)
+                    ids.append(doc_id)
 
-                        metadata = {
-                            "Master_DMC_id": master_dmc_id,
-                            "DMC_id": dmc_id,
-                            "country": country,
-                            "city": primary_city, 
-                            "max_days": max_days,
-                            "index_key": index_key,
-                            "raw_hotels": json.dumps(hotels_dict),
-                            "raw_attractions": json.dumps(attractions_dict),
-                            "raw_restaurants": json.dumps(restaurants_dict),
-                            "raw_services": json.dumps(transfers_dict), 
-                            "raw_activities": json.dumps(guides_dict),  
-                            "raw_cities": json.dumps(day_cities),               
-                            "raw_all_services": json.dumps(list_all_services),  
-                            "raw_all_transport": json.dumps(list_all_transport) 
-                        }
-
-                        doc_id = f"dmc_{dmc_id}_{primary_city}_{max_days}_{pkg_idx}_{index_key}"
-
-                        documents.append(document)
-                        metadatas.append(metadata)
-                        ids.append(doc_id)
-
-    # 2. THE SAFETY NET: Check for 0 documents BEFORE saving to ChromaDB
     if len(documents) == 0:
         print("Warning: 0 packages were found in the API data.")
-        print("Please check the Debug output above to see if the JSON structure changed!")
         return
 
-    print(f" Embedding {len(documents)} daily legs into Vector DB...")
+    print(f" Embedding {len(documents)} FULL PACKAGES into Vector DB...")
     collection.add(
         documents=documents,
         metadatas=metadatas,
